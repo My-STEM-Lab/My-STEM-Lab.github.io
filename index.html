@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>My STEM Lab — Expert STEM Tutoring</title>
+  <meta name="description" content="My STEM Lab: GCSE & A-level tutoring in Maths, Physics, Chemistry and Computer Science.">
+ 
+  <!-- Link-preview card for WhatsApp / social shares -->
+  <meta property="og:title" content="My STEM Lab — Expert STEM Tutoring">
+  <meta property="og:description" content="GCSE & A-level tutoring in Maths, Physics, Chemistry and Computer Science.">
+  <meta property="og:image" content="https://mystemlab.co.uk/MyStemLab_Poster.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystemlab.co.uk/">
+  <meta name="twitter:card" content="summary_large_image">
+ 
+  <style>
+    :root{
+      --mat-top:#eef2f6;     /* pale cool 'lab paper' backdrop */
+      --mat-bottom:#dfe6ee;
+      --ink:#0f2742;         /* brand navy, for small UI text  */
+      --teal:#0fb5ad;        /* brand lab-teal accent          */
+      --teal-deep:#0c8f89;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:max(16px,3vmin);
+      background:linear-gradient(180deg,var(--mat-top),var(--mat-bottom));
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    /* The poster: a framed print that always fits the screen, whole. */
+    .poster{
+      max-width:min(100%,820px);
+      max-height:92vh;
+      width:auto;
+      height:auto;
+      border-radius:6px;
+      box-shadow:0 1px 2px rgba(15,39,66,.18),
+                 0 18px 50px -12px rgba(15,39,66,.40);
+      animation:rise .6s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+ 
+    /* Quiet download affordance, bottom-right */
+    .save{
+      position:fixed;
+      right:max(14px,2.5vmin);
+      bottom:max(14px,2.5vmin);
+      display:inline-flex;
+      align-items:center;
+      gap:.45em;
+      padding:.55em .9em;
+      font-size:.9rem;
+      font-weight:600;
+      color:#fff;
+      background:var(--teal);
+      border-radius:999px;
+      text-decoration:none;
+      box-shadow:0 6px 18px -6px rgba(12,143,137,.6);
+      transition:background .15s ease,transform .15s ease;
+    }
+    .save:hover{background:var(--teal-deep);transform:translateY(-1px)}
+    .save:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+    .save svg{width:1.05em;height:1.05em}
+ 
+    @media (prefers-reduced-motion:reduce){
+      .poster{animation:none}
+      .save{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <img class="poster" src="MyStemLab_Poster.png"
+       alt="My STEM Lab tutoring poster — subjects offered and contact details">
+ 
+  <!-- Lets visitors save the poster (it has your contact details). -->
+  <a class="save" href="MyStemLab_Poster.png" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/>
+    </svg>
+    Download poster
+  </a>
+</body>
+</html>
