@@ -1,0 +1,30 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="2.4" fill="currentColor"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(60 12 12)"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(120 12 12)"/>
+      </svg>
+      <span class="brand-text">
+        <strong>My STEM Lab</strong>
+        <em>{{ site.tagline }}</em>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.data.navigation %}
+          {% assign item_url = item.url | relative_url %}
+          <li><a href="{{ item_url }}"{% if page.url == item.url or page.nav_section == item.title %} class="current" aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn-primary btn-sm nav-cta" href="{{ site.register_form }}" target="_blank" rel="noopener">Book free trial</a>
+    </nav>
+  </div>
+</header>

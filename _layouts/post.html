@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="page-head post-head">
+    <div class="wrap">
+     <div class="narrow">
+      <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+        {% if page.tags and page.tags.size > 0 %}
+          {% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+        {% endif %}
+      </p>
+      {% if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
+     </div>
+    </div>
+  </header>
+
+  <div class="wrap prose prose-post">
+    {{ content }}
+  </div>
+</article>
+
+<div class="wrap">
+  <p class="muted mt"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+</div>
+
+{% include cta.html heading="Want this kind of help on your own work?" text="A free trial session is the quickest way to find out if I can help." %}

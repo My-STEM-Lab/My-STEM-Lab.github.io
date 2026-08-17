@@ -1,91 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <title>My STEM Lab — Expert STEM Tutoring</title>
-  <meta name="description" content="My STEM Lab: GCSE & A-level tutoring in Maths, Physics, Chemistry and Computer Science.">
- 
-  <!-- Link-preview card for WhatsApp / social shares -->
-  <meta property="og:title" content="My STEM Lab — Expert STEM Tutoring">
-  <meta property="og:description" content="GCSE & A-level tutoring in Maths, Physics, Chemistry and Computer Science.">
-  <meta property="og:image" content="https://mystemlab.co.uk/MyStemLab_Poster.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mystemlab.co.uk/">
-  <meta name="twitter:card" content="summary_large_image">
- 
-  <style>
-    :root{
-      --mat-top:#eef2f6;     /* pale cool 'lab paper' backdrop */
-      --mat-bottom:#dfe6ee;
-      --ink:#0f2742;         /* brand navy, for small UI text  */
-      --teal:#0fb5ad;        /* brand lab-teal accent          */
-      --teal-deep:#0c8f89;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:max(16px,3vmin);
-      background:linear-gradient(180deg,var(--mat-top),var(--mat-bottom));
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    }
-    /* The poster: a framed print that always fits the screen, whole. */
-    .poster{
-      max-width:min(100%,820px);
-      max-height:92vh;
-      width:auto;
-      height:auto;
-      border-radius:6px;
-      box-shadow:0 1px 2px rgba(15,39,66,.18),
-                 0 18px 50px -12px rgba(15,39,66,.40);
-      animation:rise .6s cubic-bezier(.2,.7,.2,1) both;
-    }
-    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
- 
-    /* Quiet download affordance, bottom-right */
-    .save{
-      position:fixed;
-      right:max(14px,2.5vmin);
-      bottom:max(14px,2.5vmin);
-      display:inline-flex;
-      align-items:center;
-      gap:.45em;
-      padding:.55em .9em;
-      font-size:.9rem;
-      font-weight:600;
-      color:#fff;
-      background:var(--teal);
-      border-radius:999px;
-      text-decoration:none;
-      box-shadow:0 6px 18px -6px rgba(12,143,137,.6);
-      transition:background .15s ease,transform .15s ease;
-    }
-    .save:hover{background:var(--teal-deep);transform:translateY(-1px)}
-    .save:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-    .save svg{width:1.05em;height:1.05em}
- 
-    @media (prefers-reduced-motion:reduce){
-      .poster{animation:none}
-      .save{transition:none}
-    }
-  </style>
-</head>
-<body>
-  <img class="poster" src="MyStemLab_Poster.png"
-       alt="My STEM Lab tutoring poster — subjects offered and contact details">
- 
-  <!-- Lets visitors save the poster (it has your contact details). -->
-  <a class="save" href="MyStemLab_Poster.png" download>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/>
-    </svg>
-    Download poster
-  </a>
-</body>
-</html>
+---
+layout: default
+title: null
+nav_section: Home
+description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computing, plus STEP, ESAT and TMUA preparation. Free 30 minute trial session."
+---
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-eyebrow">Free {{ site.trial_adj }} trial session</p>
+      <h1>Learn how to <span class="accent">think through</span> a question, not just memorise a method.</h1>
+      <p class="hero-lede">
+        Online 1-to-1 tuition in Maths, Further Maths, Physics and Computing —
+        plus STEP, ESAT and TMUA preparation. All abilities welcome.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ site.register_form }}" target="_blank" rel="noopener">Book your free trial</a>
+        <a class="btn btn-outline-light" href="{{ '/subjects/' | relative_url }}">See subjects &amp; prices</a>
+      </div>
+      <p class="hero-note">Taught by {{ site.tutor_name }} · A* in Maths, Further Maths, Physics and Chemistry</p>
+    </div>
+
+    <div class="hero-card">
+      <h2>Recent results</h2>
+      <ul class="hero-stats">
+        <li><b>A*A*A*A*</b><span>A-Level Maths, Further Maths, Physics and Chemistry — 92% in Further Maths</span></li>
+        <li><b>100%</b><span>Full marks in GCSE Maths — top 0.1% nationally</span></li>
+        <li><b>Grade 9</b><span>In every one of ten GCSE subjects</span></li>
+        <li><b>Top 10%</b><span>National percentile in the TMUA</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SUBJECTS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What I teach</p>
+      <h2>Subjects</h2>
+      <p class="section-lede">Every subject page sets out exactly what's covered, how I teach it, and free resources you can start using today.</p>
+    </div>
+
+    <h3 class="mt">GCSE</h3>
+    <div class="grid grid-4" style="margin-bottom:2.5rem">
+      {% assign gcse = site.subjects | where: "level", "GCSE" | sort: "order" %}
+      {% for s in gcse %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <h3>A-Level</h3>
+    <div class="grid grid-3" style="margin-bottom:2.5rem">
+      {% assign alevel = site.subjects | where: "level", "A-Level" | sort: "order" %}
+      {% for s in alevel %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <h3>University admissions tests</h3>
+    <div class="grid grid-3">
+      {% assign tests = site.subjects | where: "level", "Admissions test" | sort: "order" %}
+      {% for s in tests %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPROACH ===================== -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How I teach</p>
+      <h2>Small, meaningful steps</h2>
+      <p class="section-lede">
+        Most students don't get stuck because a topic is too hard. They get stuck because the question
+        in front of them doesn't look like the one they practised. That's a different problem, and it
+        has a different fix.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Break it down</h3>
+        <p>Every hard problem is a stack of small ones. We take them apart together until each step is
+        something you could have found yourself — because next time, you will.</p>
+      </div>
+      <div class="card">
+        <h3>Understand, don't memorise</h3>
+        <p>A memorised method survives until the exam rewords the question. Knowing why it works
+        survives anything.</p>
+      </div>
+      <div class="card">
+        <h3>Work on your actual weak spots</h3>
+        <p>Every mistake gets classified — a real gap, too slow, a careless slip, or a misread question.
+        The pattern tells us what to do next far better than a score does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Getting started</p>
+      <h2>How it works</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Register your interest</h3>
+        <p>A short form telling me the subject, the year group, and what you'd like to get out of it.</p>
+      </li>
+      <li>
+        <h3>Free {{ site.trial_adj }} trial</h3>
+        <p>We meet online, work through a question together, and you decide whether it's a fit. No cost, no commitment.</p>
+      </li>
+      <li>
+        <h3>A plan, not just sessions</h3>
+        <p>We agree what we're aiming at and in what order — especially important for admissions tests with fixed dates.</p>
+      </li>
+      <li>
+        <h3>Weekly sessions</h3>
+        <p>Online, 1-to-1, with work set between sessions and reviewed at the start of the next.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Simple pricing</p>
+      <h2>Rates</h2>
+      <p class="section-lede">Paid per session. No packages, no joining fee, and the first {{ site.trial_length }} are free.</p>
+    </div>
+    <div class="price-grid">
+      {% for p in site.pricing %}
+        <div class="price">
+          <h3>{{ p.level }}</h3>
+          <span class="amount">{{ p.price }}</span>
+          <span class="unit">{{ p.unit }}</span>
+          <p class="detail">{{ p.detail }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / POSTER ===================== -->
+<section class="section">
+  <div class="wrap poster-block">
+    <div>
+      <p class="eyebrow">About the tutor</p>
+      <h2>Hi, I'm {{ site.tutor_name }}</h2>
+      <p>
+        I've just finished my A-Levels in Maths, Further Maths, Physics and Chemistry at
+        St Olave's Grammar School, with an A* in all four and 92% in Further Maths. I start at the
+        University of Warwick reading Pure Mathematics in September 2026.
+      </p>
+      <p>
+        Before that: a grade 9 in every one of my ten GCSEs, including full marks in Maths —
+        top 0.1% nationally — and a top 10% national score in the TMUA.
+      </p>
+      <p>
+        I sat these exams recently enough to remember exactly where they catch people out, and I
+        enjoy the part most people find frustrating: taking a problem that looks impossible and
+        finding the small step that makes it start to move.
+      </p>
+      <p>
+        <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">More about me</a>
+      </p>
+    </div>
+    <div>
+      <img src="{{ '/MyStemLab_Poster.png' | relative_url }}" alt="My STEM Lab poster showing subjects, pricing and contact details" loading="lazy" width="1654" height="2339">
+      <p class="muted center" style="margin-top:1rem;font-size:.9rem">
+        <a href="{{ '/MyStemLab_Poster.png' | relative_url }}" download>Download the poster</a> — handy for sharing on WhatsApp
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Before you ask</p>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>How do online sessions actually work?</summary>
+        <p>We meet by video call with a shared digital whiteboard, so we can both write and both see the
+        working build up in real time. It works just as well as being in a room together — often better,
+        because you get to keep the whole board afterwards.</p>
+      </details>
+      <details>
+        <summary>Is the trial session really free?</summary>
+        <p>Yes. {{ site.trial_length }}, no payment details taken, no obligation afterwards. It's as much
+        for me as for you — I'd rather find out early if I'm not the right person to help.</p>
+      </details>
+      <details>
+        <summary>What should we bring to the first session?</summary>
+        <p>A question or topic that's currently going badly, and a recent piece of marked work if you have
+        one. That tells me more in five minutes than any amount of describing would.</p>
+      </details>
+      <details>
+        <summary>Do you set homework?</summary>
+        <p>Usually, and it's discussed at the start of the next session. For admissions tests it's always
+        timed, because untimed practice teaches the wrong habit for those exams.</p>
+      </details>
+      <details>
+        <summary>How far ahead should we start admissions test preparation?</summary>
+        <p>For TMUA and ESAT, six to ten weeks of focused work is usually enough. STEP wants far longer —
+        ideally starting in Year 12 or the summer before Year 13.</p>
+      </details>
+      <details>
+        <summary>Are the free resources really free?</summary>
+        <p>Yes — no sign-up, no email address needed. Have a look at the
+        <a href="{{ '/resources/' | relative_url }}">resources page</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

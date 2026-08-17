@@ -1,0 +1,99 @@
+---
+layout: default
+title: About
+permalink: /about/
+nav_section: About
+description: "Aarit Maheshwari — A* in Maths, Further Maths, Physics and Chemistry at St Olave's Grammar School, reading Pure Maths at Warwick from September 2026."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">About the tutor</p>
+    <h1>Hi, I'm {{ site.tutor_name }}</h1>
+    <p class="lede">I run My STEM Lab, offering online 1-to-1 tuition in Maths, Further Maths, Physics and Computing, plus STEP, ESAT and TMUA preparation.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap tutor-grid">
+    <img class="tutor-photo" src="{{ '/assets/img/aarit.jpg' | relative_url }}" alt="Aarit Maheshwari" width="657" height="840">
+
+    <div class="prose" style="padding-block:0">
+      <h2>A bit about me</h2>
+      <p>
+        I've just finished my A-Levels in Maths, Further Maths, Physics and Chemistry at
+        <strong>St Olave's Grammar School</strong>, coming out with an <strong>A* in all four</strong> and
+        <strong>92% in Further Maths</strong>. In September 2026 I start at the
+        <strong>University of Warwick</strong>, reading Pure Mathematics.
+      </p>
+      <p>
+        Before that I got a <strong>grade 9 in every one of my ten GCSEs</strong>, including
+        <strong>full marks in Maths</strong> — top 0.1% nationally — and I scored in the
+        <strong>top 10% nationally in the TMUA</strong>.
+      </p>
+
+      <h2>How I teach</h2>
+      <p>
+        I break hard problems into small, meaningful steps, so students learn how to think through a
+        question rather than just memorise a method. That distinction matters more than it sounds like it does.
+      </p>
+      <p>
+        A memorised method is fragile. It works right up until the exam rewords the question, moves the
+        unknown to the other side, or combines two topics you'd only ever met separately — and then it
+        collapses, usually at the worst possible moment. Understanding <em>why</em> a method works is
+        what lets you rebuild it under pressure.
+      </p>
+      <p>
+        So my sessions tend to be slower than you'd expect at the start. We spend real time on the
+        question <em>before</em> the algebra: what is this actually asking, what do I already know that
+        connects to it, what would I try first? That habit is the thing I'm really teaching. The content
+        follows from it.
+      </p>
+
+      <h2>Why a recent student, rather than an experienced teacher</h2>
+      <p>
+        A fair question, and worth being straight about. I don't have twenty years of classroom experience.
+        What I have instead is that I sat these exact papers this summer.
+      </p>
+      <p>
+        I remember which topics genuinely felt hard rather than which ones the textbook says are hard.
+        I remember what the clock feels like in a TMUA paper. I know which explanations landed for me and
+        which ones I had to go away and re-learn properly. And I'm close enough in age that students tend
+        to say when they're lost, rather than nodding along — which is worth a great deal, because I can't
+        fix a gap I don't know about.
+      </p>
+
+      <h2>Who I work with</h2>
+      <p>
+        All abilities, genuinely. I work with students trying to secure a pass and students chasing an
+        S grade in STEP, and I find both interesting for the same reason: in each case the job is to find
+        the exact point where understanding stops, and start from there.
+      </p>
+
+      <h2>The best way to find out</h2>
+      <p>
+        Book a free {{ site.trial_adj }} trial. Bring a question that's been beating you. We'll work
+        through it together and you'll know pretty quickly whether this is useful.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Results</h2>
+    </div>
+    <div class="stat-grid">
+      {% for a in site.data.achievements %}
+        <div class="stat">
+          <b>{{ a.figure }}</b>
+          <span class="stat-label">{{ a.label }}</span>
+          <span class="stat-detail">{{ a.detail }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

@@ -1,0 +1,118 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+nav_section: Contact
+description: "Register for tuition or ask a question. Free 30 minute trial session, no obligation. Email aarit@mystemlab.co.uk."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Register or ask a question</h1>
+    <p class="lede">
+      Fill in the form below and I'll get back to you, usually within a day. If you'd rather just email,
+      that's completely fine too — the details are on the right.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap contact-grid">
+
+    <!-- ============ FORM ============ -->
+    <div>
+      <h2>Registration form</h2>
+      <p class="muted">
+        This is the quickest route. It takes about two minutes and tells me the subject, the year group,
+        and what you'd like help with.
+      </p>
+
+      <iframe
+        class="form-frame"
+        title="My STEM Lab registration form"
+        src="https://forms.cloud.microsoft/r/UZzMGsy1aD?embed=true"
+        allowfullscreen
+        loading="lazy"
+        sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+      </iframe>
+
+      <p class="form-note">
+        Form not loading? Open it in a new tab instead:
+        <a href="{{ site.register_form }}" target="_blank" rel="noopener">{{ site.register_form }}</a>
+      </p>
+    </div>
+
+    <!-- ============ OTHER WAYS ============ -->
+    <aside>
+      <h2>Other ways to reach me</h2>
+
+      <ul class="contact-methods">
+        <li>
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          </span>
+          <span>
+            <b>Email</b>
+            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+          </span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>
+          </span>
+          <span>
+            <b>Where</b>
+            <span>Online, anywhere in the UK</span>
+          </span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <span>
+            <b>Response time</b>
+            <span>Usually within 24 hours</span>
+          </span>
+        </li>
+      </ul>
+
+      <div class="card card-tint" style="margin-bottom:1.2rem">
+        <h3>Email me directly</h3>
+        <p style="font-size:.93rem">Prefer to write your own message? These open your email app with the subject already filled in.</p>
+        <a class="btn btn-primary btn-block btn-sm"
+           href="mailto:{{ site.email }}?subject=Free%20trial%20session&body=Hi%20Aarit%2C%0A%0AI'd%20like%20to%20book%20a%20free%20trial%20session.%0A%0AStudent's%20name%3A%0AYear%20group%3A%0ASubject(s)%3A%0AExam%20board%20(if%20known)%3A%0AWhat%20we'd%20like%20help%20with%3A%0A%0AThanks%2C">Request a free trial</a>
+        <a class="btn btn-ghost btn-block btn-sm"
+           href="mailto:{{ site.email }}?subject=Question%20about%20tuition&body=Hi%20Aarit%2C%0A%0A">Ask a question</a>
+      </div>
+
+      <div class="card qr-box">
+        <h3>Scan to register</h3>
+        <img src="{{ '/assets/img/qr-register.png' | relative_url }}" alt="QR code linking to the My STEM Lab registration form" width="170" height="170" loading="lazy">
+        <p class="muted" style="font-size:.88rem;margin:0">Point a phone camera at this to open the registration form.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What happens next</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>I read your form</h3>
+        <p>And reply by email, usually the same day, with a couple of times that could work.</p>
+      </li>
+      <li>
+        <h3>We meet for {{ site.trial_length }}</h3>
+        <p>Free. Online. Bring a question that's been giving you trouble.</p>
+      </li>
+      <li>
+        <h3>You decide</h3>
+        <p>No pressure either way. If I'm not the right person to help, I'll say so and try to point you somewhere better.</p>
+      </li>
+    </ol>
+  </div>
+</section>

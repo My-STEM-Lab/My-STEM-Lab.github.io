@@ -1,0 +1,13 @@
+# The main site menu. Order here is the order on screen.
+- title: Home
+  url: /
+- title: Subjects
+  url: /subjects/
+- title: Free Resources
+  url: /resources/
+- title: Blog
+  url: /blog/
+- title: About
+  url: /about/
+- title: Contact
+  url: /contact/

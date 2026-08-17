@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <strong>My STEM Lab</strong>
+      <p>Online 1-to-1 tuition in Maths, Further Maths, Physics and Computing, plus STEP, ESAT and TMUA preparation.</p>
+      <p class="footer-contact">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Subjects</h3>
+      <ul>
+        {% assign gcse = site.subjects | where: "level", "GCSE" | sort: "order" %}
+        {% for s in gcse %}<li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>A-Level &amp; admissions</h3>
+      <ul>
+        {% assign alevel = site.subjects | where: "level", "A-Level" | sort: "order" %}
+        {% for s in alevel %}<li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>{% endfor %}
+        {% assign tests = site.subjects | where: "level", "Admissions test" | sort: "order" %}
+        {% for s in tests %}<li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>More</h3>
+      <ul>
+        <li><a href="{{ '/resources/' | relative_url }}">Free resources</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About Aarit</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="{{ '/members/' | relative_url }}">Member area</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-base">
+    <p>&copy; {{ 'now' | date: "%Y" }} My STEM Lab. Tuition by {{ site.tutor_name }}.</p>
+    <p><a href="{{ '/MyStemLab_Poster.png' | relative_url }}" download>Download poster</a></p>
+  </div>
+</footer>

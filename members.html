@@ -1,0 +1,71 @@
+---
+layout: default
+title: Member Area
+permalink: /members/
+description: "Member resources for My STEM Lab students — worked solutions, structured problem sets and admissions test programmes."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">For students</p>
+    <h1>Member area</h1>
+    <p class="lede">
+      Structured material that goes beyond what's on the free resources page — currently being built.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's coming</h2>
+      <p class="section-lede">
+        The <a href="{{ '/resources/' | relative_url }}">free resources</a> stay free, permanently. This
+        area is for the longer-form material that takes real time to write.
+      </p>
+    </div>
+
+    <div class="locked-grid">
+      <div class="locked">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Worked solution sets</h3>
+        <p>Full solutions with the reasoning written out — not just the answer, but why you'd try that step first.</p>
+      </div>
+      <div class="locked">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Graded problem sets</h3>
+        <p>Topic sets that build from routine to genuinely hard, so you can find your own ceiling and push it.</p>
+      </div>
+      <div class="locked">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Admissions test programmes</h3>
+        <p>Week-by-week preparation plans for TMUA, ESAT and STEP, with timed sets and a progress tracker.</p>
+      </div>
+      <div class="locked">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Mock papers</h3>
+        <p>Written to match the real thing in style and difficulty, with mark schemes and examiner-style comments.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>
+        <strong>Not open yet.</strong> If you'd like to be told when it is,
+        <a href="mailto:{{ site.email }}?subject=Member%20area%20waiting%20list">drop me an email</a>
+        and I'll add you to the list. Current students get access included.
+      </p>
+    </div>
+
+    <h2 style="margin-top:3rem">Member sign in</h2>
+    <p class="muted">Sign-in isn't active yet. This is a placeholder so the page is ready when the material is.</p>
+
+    <form class="login-card" id="member-login" autocomplete="off">
+      <label for="member-email">Email address</label>
+      <input type="email" id="member-email" name="email" placeholder="you@example.com" disabled>
+
+      <label for="member-code">Access code</label>
+      <input type="password" id="member-code" name="code" placeholder="Provided when you join" disabled>
+
+      <button class="btn btn-primary btn-block" type="submit" disabled>Sign in</button>
+      <p class="form-note">Coming soon. In the meantime, current students receive material directly by email.</p>
+    </form>
+  </div>
+</section>
+
+{% include cta.html heading="Want the material now?" text="Current students get everything above included as part of their sessions." %}

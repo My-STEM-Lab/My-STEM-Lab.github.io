@@ -1,0 +1,59 @@
+---
+layout: default
+title: Free Resources
+permalink: /resources/
+nav_section: Free Resources
+description: "Free revision resources for GCSE and A-Level Maths, Further Maths, Physics and Computer Science, plus STEP, ESAT and TMUA. No sign-up required."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Free for everyone</p>
+    <h1>Free resources</h1>
+    <p class="lede">
+      Everything on this page is free and needs no sign-up, no email address and no account.
+      These are the things I actually point my own students at.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <label for="resource-filter" style="display:block;font-weight:600;color:var(--navy);margin-bottom:.5rem">Search resources</label>
+    <input id="resource-filter" type="search" placeholder="Try &ldquo;past papers&rdquo;, &ldquo;physics&rdquo;, &ldquo;STEP&rdquo;…"
+           style="width:100%;max-width:460px;padding:.8rem 1rem;border:1px solid var(--card-line);border-radius:9px;font-size:1rem;font-family:inherit;margin-bottom:3rem">
+
+    {% assign levels = "GCSE,A-Level,Admissions test" | split: "," %}
+    {% for level in levels %}
+      {% assign subs = site.subjects | where: "level", level | sort: "order" %}
+      <h2 style="margin-top:1rem">{{ level }}{% if level == "Admissions test" %}s{% endif %}</h2>
+      {% for s in subs %}
+        <div class="resource-group" data-subject="{{ s.title }} {{ s.level }}">
+          <h2 style="font-size:1.35rem">
+            <a href="{{ s.url | relative_url }}">{{ s.title }}</a>
+          </h2>
+          {% include resource-list.html slug=s.slug %}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Want something that isn't here?</h2>
+      <p class="section-lede">
+        I'm adding worksheets and worked solutions of my own as I write them. If there's a topic you're
+        stuck on and you can't find anything decent, tell me — it's genuinely useful to know what's missing,
+        and it usually becomes the next thing I write.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Suggest a resource</a>
+        <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% include cta.html heading="Stuck on something specific?" text="A free trial session is often the fastest way to unstick a topic that's been dragging on for weeks." %}

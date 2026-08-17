@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<header class="page-head subject-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="{{ '/subjects/' | relative_url }}">Subjects</a> <span aria-hidden="true">→</span> {{ page.level }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
+    <p class="subject-meta">
+      <span class="pill">{{ page.level }}</span>
+      {% if page.price %}<span class="pill pill-price">{{ page.price }} per hour</span>{% endif %}
+      {% if page.boards %}<span class="pill">{{ page.boards }}</span>{% endif %}
+    </p>
+  </div>
+</header>
+
+<div class="wrap subject-body">
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <aside class="subject-aside">
+    <div class="card card-cta">
+      <h3>Free {{ site.trial_adj }} trial</h3>
+      <p>See whether we're a good fit before paying anything.</p>
+      <a class="btn btn-primary btn-block" href="{{ site.register_form }}" target="_blank" rel="noopener">Book a trial</a>
+      <a class="btn btn-ghost btn-block" href="mailto:{{ site.email }}?subject={{ page.title | uri_escape }}%20tuition">Email me</a>
+    </div>
+
+    {% assign others = site.subjects | where: "level", page.level | sort: "order" %}
+    {% if others.size > 1 %}
+    <div class="card">
+      <h3>Other {{ page.level }} subjects</h3>
+      <ul class="plain-list">
+        {% for s in others %}{% unless s.url == page.url %}
+          <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>
+        {% endunless %}{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </aside>
+</div>
+
+<section class="section section-alt" id="resources">
+  <div class="wrap">
+    <h2>Free {{ page.title }} resources</h2>
+    <p class="section-lede">Everything here is free. No sign-up, no email required.</p>
+    {% include resource-list.html slug=page.slug %}
+    <p class="muted mt"><a href="{{ '/resources/' | relative_url }}">See resources for every subject →</a></p>
+  </div>
+</section>
+
+{% include cta.html %}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+  My STEM Lab poster — editable source.
+  Edit the text below, then re-render to PNG with:
+     node poster/render.js
+  (see poster/README.md). Page is A4 at 200 DPI = 1654 x 2339 px.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2742; --navy-2:#14314f;
+    --teal:#0fb5ad; --teal-dark:#0a7570;
+    --card:#e8f0f6; --line:#d2e0ea;
+    --ink:#0f2742; --ink-soft:#3d5771; --ink-muted:#6b8299;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1654px;height:2339px;background:#fff;font-family:var(--sans);color:var(--ink-soft);
+       display:flex;flex-direction:column;overflow:hidden}
+
+  /* ---------- header ---------- */
+  .head{background:linear-gradient(135deg,var(--navy) 0%,#16375a 60%,var(--navy) 100%);
+        color:#fff;padding:52px 70px 46px;text-align:center;position:relative;overflow:hidden}
+  .head::after{content:"";position:absolute;inset:0;
+        background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+                         linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+        background-size:54px 54px}
+  .head > *{position:relative;z-index:1}
+  .icons{display:flex;justify-content:center;gap:34px;margin-bottom:20px}
+  .icons svg{width:52px;height:52px;color:var(--teal)}
+  h1{font-family:var(--serif);font-size:108px;font-weight:700;letter-spacing:.055em;
+     line-height:1;color:#fff;margin-bottom:16px}
+  .sub{font-size:31px;font-weight:400;color:#a9cfe4;letter-spacing:.055em}
+  .trial{display:inline-block;margin-top:24px;background:var(--teal);color:#fff;
+         font-size:26px;font-weight:700;letter-spacing:.05em;padding:12px 34px;border-radius:999px}
+
+  /* ---------- body ---------- */
+  .body{flex:1;padding:44px 70px 0;display:flex;flex-direction:column}
+  .intro{font-size:27px;line-height:1.5;color:var(--ink-soft);text-align:center;
+         max-width:1360px;margin:0 auto 38px}
+  .intro b{color:var(--navy);font-weight:600}
+
+  h2{font-family:var(--serif);font-size:37px;font-weight:700;color:var(--navy);
+     letter-spacing:.09em;text-align:center;margin-bottom:26px;text-transform:uppercase}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;margin-bottom:42px}
+  .col{background:var(--card);border-radius:18px;padding:28px 30px 30px}
+  .col h3{font-family:var(--serif);font-size:29px;color:var(--navy);letter-spacing:.09em;
+          text-transform:uppercase;text-align:center;margin-bottom:20px;font-weight:700}
+  .col ul{list-style:none}
+  .col li{display:flex;align-items:center;gap:13px;font-size:26px;color:var(--ink-soft);
+          padding:7px 0;font-weight:500}
+  .col li svg{width:21px;height:21px;color:var(--teal);flex:none}
+
+  .price-col{display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .price-row{text-align:center}
+  .price-row .lvl{font-size:22px;color:var(--ink-muted);font-weight:500;letter-spacing:.03em}
+  .price-row .amt{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--navy);line-height:1.15}
+  .price-row .amt span{font-size:24px;color:var(--ink-muted);font-family:var(--sans);font-weight:500}
+
+  /* ---------- achievements ---------- */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:42px}
+  .stat{background:var(--card);border-radius:16px;padding:22px 28px;display:flex;
+        align-items:center;gap:20px}
+  .stat .dot{width:44px;height:44px;border-radius:50%;background:var(--teal);flex:none;
+             display:flex;align-items:center;justify-content:center}
+  .stat .dot svg{width:26px;height:26px;color:#fff}
+  .stat b{font-family:var(--serif);font-size:39px;color:var(--navy);line-height:1;
+          display:block;margin-bottom:5px;font-weight:700}
+  .stat span{font-size:22px;color:var(--ink-muted);line-height:1.35;display:block}
+
+  /* ---------- footer ---------- */
+  .foot{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:0 70px 46px}
+  .about{background:var(--card);border-radius:18px;padding:30px 32px;display:flex;gap:26px}
+  .about img{width:210px;height:268px;object-fit:cover;border-radius:12px;flex:none}
+  .about h3{font-family:var(--serif);font-size:29px;color:var(--navy);margin-bottom:12px;font-weight:700}
+  .about p{font-size:21.5px;line-height:1.44;color:var(--ink-soft)}
+  .about p b{color:var(--navy);font-weight:600}
+
+  .touch{background:var(--navy);border-radius:18px;padding:30px 34px;color:#fff;
+         display:flex;gap:26px;align-items:center}
+  .touch h3{font-family:var(--serif);font-size:33px;color:var(--teal);margin-bottom:18px;font-weight:700}
+  .touch ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .touch li{display:flex;align-items:center;gap:14px;font-size:22px;color:#d7e8f2}
+  .touch li svg{width:22px;height:22px;color:var(--teal);flex:none}
+  .qr{text-align:center;flex:none}
+  .qr img{width:186px;height:186px;background:#fff;padding:8px;border-radius:10px;display:block}
+  .qr p{font-size:18px;color:#fff;font-weight:600;margin-top:9px;letter-spacing:.04em}
+
+  /* ---------- how it works ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:38px}
+  .step{text-align:center;padding:0 6px}
+  .step .n{width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;
+           font-family:var(--serif);font-size:29px;font-weight:700;display:flex;
+           align-items:center;justify-content:center;margin:0 auto 14px}
+  .step h4{font-family:var(--serif);font-size:25px;color:var(--navy);margin-bottom:7px;font-weight:700}
+  .step p{font-size:20px;line-height:1.35;color:var(--ink-muted)}
+
+  /* ---------- register band ---------- */
+  .register{background:linear-gradient(115deg,var(--teal-dark),var(--teal));border-radius:18px;
+            padding:26px 40px;display:flex;align-items:center;justify-content:space-between;
+            gap:30px;margin-bottom:38px}
+  .register .big{font-family:var(--serif);font-size:33px;color:#fff;font-weight:700;line-height:1.2}
+  .register .small{font-size:21px;color:#e2fbf9;margin-top:5px}
+  .register .link{font-size:23px;color:#fff;font-weight:600;text-align:right;line-height:1.45;
+                  word-break:break-all;max-width:640px}
+</style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="head">
+    <div class="icons">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6" transform="rotate(60 12 12)"/>
+        <ellipse cx="12" cy="12" rx="10.5" ry="4.6" transform="rotate(120 12 12)"/>
+      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12h3l3 8 5-17h7"/>
+      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m8 6-6 6 6 6M16 6l6 6-6 6"/>
+      </svg>
+    </div>
+    <h1>MY STEM LAB</h1>
+    <p class="sub">Online 1-to-1 A-Level &amp; GCSE Tuition</p>
+    <p class="trial">FREE 30-MINUTE TRIAL SESSION</p>
+  </header>
+
+  <!-- ============ BODY ============ -->
+  <div class="body">
+    <p class="intro">
+      Hi, I'm <b>Aarit Maheshwari</b>. I break hard problems into small, meaningful steps, so students
+      learn how to <b>think through a question</b> rather than just memorise a method.
+      <b>All abilities welcome.</b>
+    </p>
+
+    <h2>Subjects Offered</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>GCSE</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Maths</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Physics</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Computing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>FSMQ</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>A-Level</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Maths</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Further Maths</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>Physics</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>STEP · ESAT · TMUA</li>
+        </ul>
+      </div>
+
+      <div class="col price-col">
+        <h3>Pricing</h3>
+        <div class="price-row"><p class="lvl">GCSE</p><p class="amt">£20 <span>/ hr</span></p></div>
+        <div class="price-row"><p class="lvl">A-Level</p><p class="amt">£30 <span>/ hr</span></p></div>
+        <div class="price-row"><p class="lvl">STEP · ESAT · TMUA</p><p class="amt">£40 <span>/ hr</span></p></div>
+      </div>
+    </div>
+
+    <h2>Academic Achievements</h2>
+    <div class="stats">
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>A*A*A*A*</b><span>A-Level Maths, Further Maths, Physics &amp; Chemistry</span></span>
+      </div>
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>92%</b><span>Achieved in A-Level Further Maths</span></span>
+      </div>
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>100%</b><span>Full marks in GCSE Maths — top 0.1% nationally</span></span>
+      </div>
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>Grade 9</b><span>In every single GCSE subject</span></span>
+      </div>
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>Top 10%</b><span>National percentile in the TMUA</span></span>
+      </div>
+      <div class="stat">
+        <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8z"/></svg></span>
+        <span><b>Warwick</b><span>Reading Pure Maths from September 2026</span></span>
+      </div>
+    </div>
+
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h4>Register</h4>
+        <p>A two-minute form telling me the subject and year group</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h4>Free trial</h4>
+        <p>30 minutes online, no cost and no commitment</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h4>Agree a plan</h4>
+        <p>What we're aiming at, and in what order</p>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h4>Weekly sessions</h4>
+        <p>1-to-1 online, with work set and reviewed between</p>
+      </div>
+    </div>
+
+    <div class="register">
+      <div>
+        <p class="big">Register or find out more</p>
+        <p class="small">Book your free 30-minute trial session today</p>
+      </div>
+      <p class="link">forms.cloud.microsoft/r/UZzMGsy1aD</p>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="foot">
+    <div class="about">
+      <img src="../assets/img/aarit.jpg" alt="Aarit Maheshwari">
+      <div>
+        <h3>About the Tutor</h3>
+        <p>
+          I've just finished my A-Levels in Maths, Further Maths, Physics and Chemistry at
+          <b>St Olave's Grammar School</b>, with an <b>A* in all four</b>. I start at
+          <b>Warwick University</b> reading <b>Pure Mathematics</b> in September 2026.
+        </p>
+      </div>
+    </div>
+
+    <div class="touch">
+      <div style="flex:1">
+        <h3>Get in Touch</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Aarit Maheshwari</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>aarit@mystemlab.co.uk</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>mystemlab.co.uk</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Online</li>
+        </ul>
+      </div>
+      <div class="qr">
+        <img src="../assets/img/qr-register.png" alt="QR code to register">
+        <p>SCAN TO REGISTER</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

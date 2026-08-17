@@ -1,0 +1,4 @@
+Put your own worksheets and PDFs in this folder, then link to them
+from _data/resources.yml as /assets/resources/your-file.pdf
+
+Remember: anything in here is publicly downloadable. See README.md.

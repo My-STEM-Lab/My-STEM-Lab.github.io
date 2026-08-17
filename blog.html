@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+nav_section: Blog
+description: "Notes on problem solving, exam technique and admissions test preparation from My STEM Lab."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Notes and tips</p>
+    <h1>Blog</h1>
+    <p class="lede">
+      Short pieces on problem solving, exam technique and admissions test preparation —
+      mostly things I find myself explaining often enough that they're worth writing down.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li class="post-card">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+              {% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+            </p>
+            <p class="post-excerpt">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 200 }}</p>
+            <a href="{{ post.url | relative_url }}">Read the post →</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="muted">No posts yet — the first one is on its way.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include cta.html %}

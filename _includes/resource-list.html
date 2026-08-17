@@ -1,0 +1,16 @@
+{% comment %}
+  Renders the free-resource cards for one subject.
+  Usage: {% include resource-list.html slug=page.slug %}
+{% endcomment %}
+{% assign items = site.data.resources[include.slug] %}
+{% if items and items.size > 0 %}
+  {% assign featured = items | where: "featured", true %}
+  {% assign rest = items | where_exp: "r", "r.featured != true" %}
+  <ul class="resource-list">
+    {% for r in featured %}{% include resource-card.html r=r %}{% endfor %}
+    {% for r in rest %}{% include resource-card.html r=r %}{% endfor %}
+  </ul>
+{% else %}
+  <p class="muted">Resources for this subject are on the way. In the meantime,
+    <a href="{{ '/contact/' | relative_url }}">ask me</a> what would help most and I'll point you somewhere good.</p>
+{% endif %}

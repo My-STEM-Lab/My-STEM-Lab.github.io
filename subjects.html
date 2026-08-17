@@ -1,0 +1,95 @@
+---
+layout: default
+title: Subjects
+permalink: /subjects/
+nav_section: Subjects
+eyebrow: What I teach
+description: "GCSE Maths, Physics, Computer Science and FSMQ; A-Level Maths, Further Maths and Physics; plus STEP, ESAT and TMUA preparation."
+---
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">What I teach</p>
+    <h1>Subjects &amp; prices</h1>
+    <p class="lede">
+      Everything below is taught online, 1-to-1, starting with a free {{ site.trial_adj }} trial.
+      Each subject page sets out what's covered, how I approach it, and free resources you can use straight away.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h2>GCSE <span class="pill pill-price">£20 per hour</span></h2>
+    <p class="section-lede">All major exam boards, Foundation and Higher.</p>
+    <div class="grid grid-4">
+      {% assign gcse = site.subjects | where: "level", "GCSE" | sort: "order" %}
+      {% for s in gcse %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>A-Level <span class="pill pill-price">£30 per hour</span></h2>
+    <p class="section-lede">Year 12 and Year 13, all specifications including OCR MEI.</p>
+    <div class="grid grid-3">
+      {% assign alevel = site.subjects | where: "level", "A-Level" | sort: "order" %}
+      {% for s in alevel %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>University admissions tests <span class="pill pill-price">£40 per hour</span></h2>
+    <p class="section-lede">
+      These tests reward a different skill from A-Level, and they have fixed dates. Starting early matters
+      more here than anywhere else.
+    </p>
+    <div class="grid grid-3">
+      {% assign tests = site.subjects | where: "level", "Admissions test" | sort: "order" %}
+      {% for s in tests %}
+        <a class="subject-card" href="{{ s.url | relative_url }}">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.blurb }}</p>
+          <span class="more">Read more →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2>Rates</h2>
+      <p class="section-lede">Paid per session. No packages and no joining fee.</p>
+    </div>
+    <div class="price-grid">
+      {% for p in site.pricing %}
+        <div class="price">
+          <h3>{{ p.level }}</h3>
+          <span class="amount">{{ p.price }}</span>
+          <span class="unit">{{ p.unit }}</span>
+          <p class="detail">{{ p.detail }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <p class="muted center mt">Don't see your subject? <a href="{{ '/contact/' | relative_url }}">Ask me</a> — I may still be able to help or point you to someone who can.</p>
+  </div>
+</section>
+
+{% include cta.html %}

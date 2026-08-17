@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------------------
+#  My STEM Lab — site configuration
+#  Most day-to-day content lives in _data/*.yml and _subjects/*.md.
+#  Change things here only when they affect the whole site.
+# ---------------------------------------------------------------------------
+
+title: My STEM Lab
+tagline: Online 1-to-1 STEM Tuition
+description: >-
+  Online 1-to-1 tuition in Maths, Further Maths, Physics and Computing,
+  plus STEP, ESAT and TMUA preparation. Taught by Aarit Maheshwari —
+  A* in Maths, Further Maths, Physics and Chemistry, grade 9 in every GCSE.
+url: "https://mystemlab.co.uk"
+baseurl: ""
+lang: en_GB
+
+# --- Contact details (used across the site; change once, updates everywhere) --
+tutor_name: Aarit Maheshwari
+email: aarit@mystemlab.co.uk
+register_form: "https://forms.cloud.microsoft/r/UZzMGsy1aD"
+trial_length: "30 minutes"      # noun form, e.g. "we meet for 30 minutes"
+trial_adj: "30-minute"          # adjective form, e.g. "a 30-minute trial"
+
+# --- Pricing (shown on the home page and the pricing table) ------------------
+pricing:
+  - level: GCSE
+    price: "£20"
+    unit: "per hour"
+    detail: "Maths, Physics, Computer Science, FSMQ"
+  - level: A-Level
+    price: "£30"
+    unit: "per hour"
+    detail: "Maths, Further Maths, Physics"
+  - level: STEP / ESAT / TMUA
+    price: "£40"
+    unit: "per hour"
+    detail: "University admissions test preparation"
+
+# --- Build settings ---------------------------------------------------------
+# Blog post URLs look like /blog/post-title/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+collections:
+  subjects:
+    output: true
+    permalink: /subjects/:name/
+
+defaults:
+  - scope: { path: "", type: "subjects" }
+    values: { layout: "subject" }
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post" }
+  - scope: { path: "" }
+    values: { layout: "page" }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - poster/
+  - vendor/
+  - .jekyll-cache/

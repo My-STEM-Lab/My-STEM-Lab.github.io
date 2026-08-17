@@ -1,0 +1,131 @@
+# ---------------------------------------------------------------------------
+#  FREE RESOURCES
+#
+#  To add a resource, find the subject key below and add a new "- title:" block.
+#  Nothing else needs changing — it appears on the subject page and the
+#  /resources/ hub automatically.
+#
+#  Fields:
+#    title       (required) what it's called
+#    type        Notes | Worksheet | Past papers | Practice | Video | Tool
+#    description one sentence on what it is and who it helps
+#    url         either an external link, or /assets/resources/your-file.pdf
+#                for a file you've put in the assets/resources/ folder
+#    external    true if the link goes to another website (adds an icon)
+#    featured    true to pin it to the top of the list
+# ---------------------------------------------------------------------------
+
+gcse-maths:
+  - title: "Dr Frost Maths"
+    type: "Practice"
+    description: "Free question banks sorted by topic, with instant marking and worked solutions."
+    url: "https://www.drfrostmaths.com/"
+    external: true
+    featured: true
+  - title: "Physics & Maths Tutor — GCSE Maths"
+    type: "Past papers"
+    description: "Past papers and mark schemes for every major exam board, plus topic question sets."
+    url: "https://www.physicsandmathstutor.com/gcse-maths-papers/"
+    external: true
+
+gcse-physics:
+  - title: "Isaac Physics"
+    type: "Practice"
+    description: "Free problem sets from the University of Cambridge that build genuine physics problem-solving, not just recall."
+    url: "https://isaacphysics.org/"
+    external: true
+    featured: true
+  - title: "Physics & Maths Tutor — GCSE Physics"
+    type: "Past papers"
+    description: "Past papers, mark schemes and topic-by-topic question sets."
+    url: "https://www.physicsandmathstutor.com/physics-revision/gcse/"
+    external: true
+
+gcse-computer-science:
+  - title: "Isaac Computer Science"
+    type: "Notes"
+    description: "Free, exam-board-mapped notes and questions covering the whole GCSE course."
+    url: "https://isaaccomputerscience.org/"
+    external: true
+    featured: true
+
+gcse-fsmq:
+  - title: "MadAsMaths — Additional Maths"
+    type: "Worksheet"
+    description: "Large free collection of practice questions with full worked solutions."
+    url: "https://madasmaths.com/"
+    external: true
+    featured: true
+
+a-level-maths:
+  - title: "MadAsMaths"
+    type: "Worksheet"
+    description: "Thousands of free A-Level questions with full solutions — the best free source for extra practice."
+    url: "https://madasmaths.com/"
+    external: true
+    featured: true
+  - title: "Underground Mathematics"
+    type: "Practice"
+    description: "Cambridge-built rich A-Level tasks that reward thinking rather than method-spotting."
+    url: "https://undergroundmathematics.org/"
+    external: true
+
+a-level-further-maths:
+  - title: "MadAsMaths — Further Maths"
+    type: "Worksheet"
+    description: "Free question sets across complex numbers, matrices, hyperbolics, differential equations and more."
+    url: "https://madasmaths.com/"
+    external: true
+    featured: true
+  - title: "Integral (MEI)"
+    type: "Notes"
+    description: "Notes and exercises written for the OCR MEI specification."
+    url: "https://integralmaths.org/"
+    external: true
+
+a-level-physics:
+  - title: "Isaac Physics"
+    type: "Practice"
+    description: "The single best free resource for A-Level physics problem solving, with graded difficulty levels."
+    url: "https://isaacphysics.org/"
+    external: true
+    featured: true
+
+tmua:
+  - title: "Official TMUA past papers"
+    type: "Past papers"
+    description: "Every released paper and worked solution from the official test provider — start here."
+    url: "https://www.esat-tmua.ac.uk/"
+    external: true
+    featured: true
+  - title: "Underground Mathematics"
+    type: "Practice"
+    description: "Excellent preparation for Paper 2 reasoning: logic, proof, necessary and sufficient conditions."
+    url: "https://undergroundmathematics.org/"
+    external: true
+
+step:
+  - title: "STEP Support Programme (Cambridge)"
+    type: "Practice"
+    description: "Free, structured 25-module programme from the University of Cambridge. If you do one thing for STEP, do this."
+    url: "https://maths.org/step/"
+    external: true
+    featured: true
+  - title: "STEP past papers and mark schemes"
+    type: "Past papers"
+    description: "The full archive of past STEP papers with official solutions and examiner reports."
+    url: "https://maths.org/step/past-papers"
+    external: true
+
+esat:
+  - title: "Official ESAT information and past materials"
+    type: "Past papers"
+    description: "Specification, format and released practice material for the Engineering and Science Admissions Test."
+    url: "https://www.esat-tmua.ac.uk/"
+    external: true
+    featured: true
+  - title: "Isaac Physics"
+    type: "Practice"
+    description: "The physics section of ESAT rewards fast, accurate problem solving — Isaac's problem sets are ideal training."
+    url: "https://isaacphysics.org/"
+    external: true
