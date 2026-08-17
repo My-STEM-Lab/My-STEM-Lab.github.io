@@ -41,8 +41,8 @@ shaky, everything downstream feels shaky. It's usually worth spending two full s
 rebuilding them properly rather than patching topic by topic.
 </div>
 
-## Thinking about STEP or ESAT?
+## Thinking about STEP?
 
-Further Maths is the natural foundation for both. If you're applying to Cambridge, Warwick,
-Imperial or Oxford, have a look at [STEP](/subjects/step/), [ESAT](/subjects/esat/)
-and [TMUA](/subjects/tmua/) preparation.
+Further Maths is the foundation for both papers — STEP 2 assumes the AS content, and STEP 3 assumes
+the full A-Level. If your offer is likely to include STEP, have a look at
+[STEP preparation](/subjects/step/), and start earlier than you think you need to.

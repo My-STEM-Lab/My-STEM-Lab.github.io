@@ -6,7 +6,7 @@ order: 2
 price: "£40"
 boards: "Sixth Term Examination Paper"
 subtitle: "Three hours, twelve questions, your best six count. The hardest maths exam you'll sit at school — and the most rewarding."
-description: "STEP Maths preparation online, 1-to-1. STEP 2 and STEP 3, for Cambridge, Warwick and Imperial offers. £40 per hour."
+description: "STEP Maths preparation online, 1-to-1. STEP 2 and STEP 3, for Cambridge and Warwick offers. £40 per hour."
 blurb: "STEP 2 and 3. Long-form problem solving for Cambridge and Warwick offers."
 ---
 
@@ -19,8 +19,9 @@ only your **best six** count. Each question is out of 20, so 120 is a full paper
 
 STEP 2 assumes A-Level Maths plus AS Further Maths. STEP 3 assumes a full Further Maths A-Level.
 
-It's the standard conditional for Cambridge mathematics, and used or recommended by Warwick,
-Imperial and others.
+It's the standard conditional for Cambridge mathematics, and Warwick makes STEP-based offers too.
+A number of other departments recommend it or will take a good grade into account — check what your
+own offer actually asks for, since this varies by course and by year.
 
 ## Why STEP is different
 
