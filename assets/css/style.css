@@ -239,18 +239,49 @@ p  { margin: 0 0 1.1em; }
 .card-cta h3 { margin-bottom: .35rem; }
 .card-cta p { font-size: .93rem; margin-bottom: 1rem; }
 
+/* --- level heading with a prominent price badge --------------------------- */
+.level-head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.4rem;
+  margin-bottom: .5rem;
+}
+.level-head h2, .level-head h3 { margin: 0; }
+.level-head h3 { font-size: 1.55rem; }
+.level-price {
+  display: inline-flex; align-items: baseline; gap: .5rem; margin: 0;
+  background: linear-gradient(125deg, var(--teal-dark), var(--teal));
+  color: #fff; padding: .5rem 1.25rem .55rem; border-radius: 999px;
+  box-shadow: 0 8px 20px -10px rgba(12,143,137,.85);
+  white-space: nowrap;
+}
+.level-price b { font-family: var(--serif); font-size: 1.9rem; font-weight: 700; line-height: 1; }
+.level-price span {
+  font-size: .78rem; font-weight: 600; letter-spacing: .07em;
+  text-transform: uppercase; color: #d6fbf8;
+}
+@media (max-width: 480px) { .level-price b { font-size: 1.6rem; } }
+
 /* subject cards */
 .subject-card {
   display: flex; flex-direction: column;
   background: var(--paper); border: 1px solid var(--card-line); border-radius: var(--radius);
-  padding: 1.5rem 1.6rem; text-decoration: none; color: inherit;
+  padding: 1.5rem 1.6rem 1.3rem; text-decoration: none; color: inherit;
   box-shadow: var(--shadow-sm);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 .subject-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--teal); color: inherit; }
 .subject-card h3 { margin-bottom: .35rem; font-size: 1.22rem; }
-.subject-card p { font-size: .93rem; color: var(--ink-muted); margin-bottom: 1rem; }
-.subject-card .more { margin-top: auto; font-size: .89rem; font-weight: 600; color: var(--teal-dark); }
+.subject-card p { font-size: .93rem; color: var(--ink-muted); margin-bottom: 1.1rem; }
+.card-foot {
+  margin-top: auto; display: flex; align-items: baseline; justify-content: space-between;
+  gap: .75rem; padding-top: .85rem; border-top: 1px solid var(--card-line);
+}
+.card-price {
+  font-family: var(--serif); font-size: 1.45rem; font-weight: 700;
+  color: var(--teal-dark); line-height: 1; white-space: nowrap;
+}
+.card-price small { font-family: var(--sans); font-size: .72rem; font-weight: 600; color: var(--ink-muted); }
+.subject-card .more { font-size: .87rem; font-weight: 600; color: var(--teal-dark); }
+.subject-card:hover .card-price { color: var(--teal-deep); }
 
 .pill, .tag {
   display: inline-block; font-size: .74rem; font-weight: 600; letter-spacing: .05em;
@@ -258,6 +289,14 @@ p  { margin: 0 0 1.1em; }
   background: var(--card); color: var(--navy-600);
 }
 .pill-price { background: rgba(15,181,173,.14); color: var(--teal-dark); }
+/* Bigger price chip used in the subject-page header */
+.pill-price-lg {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 700;
+  letter-spacing: 0; text-transform: none; padding: .35rem 1.15rem .45rem;
+  background: linear-gradient(125deg, var(--teal-dark), var(--teal)); color: #fff;
+  box-shadow: 0 6px 16px -8px rgba(12,143,137,.8);
+}
+.pill-price-lg small { font-family: var(--sans); font-size: .72rem; font-weight: 600; color: #d6fbf8; }
 .tag-star { background: rgba(15,181,173,.16); color: var(--teal-dark); }
 .subject-meta { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.2rem; }
 

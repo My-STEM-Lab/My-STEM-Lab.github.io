@@ -42,38 +42,50 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
       <p class="section-lede">Every subject page sets out exactly what's covered, how I teach it, and free resources you can start using today.</p>
     </div>
 
-    <h3 class="mt">GCSE</h3>
+    <div class="level-head mt"><h3>GCSE</h3>
+      <p class="level-price"><b>£20</b><span>per hour</span></p></div>
     <div class="grid grid-4" style="margin-bottom:2.5rem">
       {% assign gcse = site.subjects | where: "level", "GCSE" | sort: "order" %}
       {% for s in gcse %}
         <a class="subject-card" href="{{ s.url | relative_url }}">
           <h3>{{ s.title }}</h3>
           <p>{{ s.blurb }}</p>
-          <span class="more">Read more →</span>
+          <span class="card-foot">
+            <span class="card-price">{{ s.price }}<small>/hr</small></span>
+            <span class="more">Read more →</span>
+          </span>
         </a>
       {% endfor %}
     </div>
 
-    <h3>A-Level</h3>
+    <div class="level-head"><h3>A-Level</h3>
+      <p class="level-price"><b>£30</b><span>per hour</span></p></div>
     <div class="grid grid-3" style="margin-bottom:2.5rem">
       {% assign alevel = site.subjects | where: "level", "A-Level" | sort: "order" %}
       {% for s in alevel %}
         <a class="subject-card" href="{{ s.url | relative_url }}">
           <h3>{{ s.title }}</h3>
           <p>{{ s.blurb }}</p>
-          <span class="more">Read more →</span>
+          <span class="card-foot">
+            <span class="card-price">{{ s.price }}<small>/hr</small></span>
+            <span class="more">Read more →</span>
+          </span>
         </a>
       {% endfor %}
     </div>
 
-    <h3>University admissions tests</h3>
+    <div class="level-head"><h3>University admissions tests</h3>
+      <p class="level-price"><b>£40</b><span>per hour</span></p></div>
     <div class="grid grid-3">
       {% assign tests = site.subjects | where: "level", "Admissions test" | sort: "order" %}
       {% for s in tests %}
         <a class="subject-card" href="{{ s.url | relative_url }}">
           <h3>{{ s.title }}</h3>
           <p>{{ s.blurb }}</p>
-          <span class="more">Read more →</span>
+          <span class="card-foot">
+            <span class="card-price">{{ s.price }}<small>/hr</small></span>
+            <span class="more">Read more →</span>
+          </span>
         </a>
       {% endfor %}
     </div>
