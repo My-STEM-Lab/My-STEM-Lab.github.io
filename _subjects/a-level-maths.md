@@ -37,7 +37,7 @@ sequence them yourself.
 
 So we spend time on the planning stage — reading a question and writing down what you're
 going to do before you do any algebra. It feels slow at first and it saves enormous amounts
-of time in the exam.
+of time in the exam, especially once you get faster at it and able to plan mentally.
 
 <div class="callout" markdown="1">
 **Where marks actually go missing:** not knowing a method is rarely the problem by Year 13.

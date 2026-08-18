@@ -35,6 +35,19 @@ These are the modules where marks are most winnable, because the method is mecha
 The trick is total discipline in setting out your working: examiners want to see each pass
 of the algorithm laid out clearly, and students who scribble lose marks they'd earned.
 
+## Mechanics Minor
+
+The difficulty of this module can vary between people, but what I found best which improved
+my skills drastically is to just practice lots of questions, and analyse what worked and
+if there are quicker ways of doing it. My advice here is to do questions as soon as you
+learn a new concept.
+
+## Stats Minor
+
+Probably one of the easier modules, as it requires just the recycling of knowledge and
+understanding how the processes click e.g carrying out hypothesis tests. Make sure to know
+the content well, and add a little practice alongside just to reinforce.
+
 <div class="callout" markdown="1">
 **On complex numbers and matrices:** these two topics carry the whole subject. If they feel
 shaky, everything downstream feels shaky. It's usually worth spending two full sessions

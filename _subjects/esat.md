@@ -52,6 +52,5 @@ practice, working directly from the official content specification so that cover
 than assumed. Every timed set gets reviewed with each error classified — gap, too slow, slip, or misread —
 and that classification drives the following week.
 
-If you'd like, I'll put together a written week-by-week plan for your specific sitting date, with the
-key registration deadlines built in. Registration closing is a hard deadline and it catches people out
-every year.
+We can also run this as a student-led teaching, where the student gives the module they want to cover, and
+what topic they are feeling stuck on, with **resources** being provided, **exclusively available** only if you tutor with me.

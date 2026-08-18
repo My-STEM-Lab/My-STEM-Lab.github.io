@@ -45,12 +45,13 @@ STEP stops feeling arbitrary.
 
 <div class="callout" markdown="1">
 **Start with the free Cambridge STEP Support Programme.** It's 25 modules, completely free, and genuinely
-excellent — I'd rather you did that and came to me with the questions it raises than paid me to
-duplicate it. It's linked in the resources below.
+excellent — it provides a foundation (pun absolutely intended) into what solving STEP questions is really like.
+I started this in beginning of Y12 personally and it helped me get ahead of my maths classes.
+ It's linked in the resources below.
 </div>
 
 ## How preparation usually runs
 
 STEP rewards a long run-up. Ideally you start in Year 12 or the summer before Year 13, working through
-the Support Programme, and we meet weekly from around January. Sessions are mostly spent on questions
-you've already attempted — the value is in the *review*, not in watching me solve things.
+the Support Programme. Sessions are mostly led by the student, however if structured practice is required
+we can discuss that as well.

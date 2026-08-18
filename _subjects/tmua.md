@@ -53,3 +53,6 @@ Six to ten weeks, one session a week, with timed practice between sessions. We s
 paper cold to get a baseline, then alternate: one session on reasoning technique, one on reviewing
 a timed paper question by question. Every error gets classified — gap, too slow, careless slip,
 or misread — because the pattern tells us what to do next far better than the score does.
+
+This can also be student-led, with paper and topic being provided before the session, and access
+to **exclusive resources** that I will provide in the lesson
