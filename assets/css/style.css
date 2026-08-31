@@ -191,6 +191,11 @@ p  { margin: 0 0 1.1em; }
 .hero-stats li { display: grid; grid-template-columns: auto 1fr; gap: .9rem; align-items: baseline; }
 .hero-stats b { font-family: var(--serif); font-size: 1.45rem; color: #4fe0d8; white-space: nowrap; }
 .hero-stats span { font-size: .89rem; color: #b9d3e4; line-height: 1.45; }
+.hero-card-note {
+  margin: 1.25rem 0 0; padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.14);
+  font-size: .82rem; color: #93b3c9; line-height: 1.45;
+}
 
 @media (max-width: 880px) {
   .hero-grid { grid-template-columns: 1fr; }
