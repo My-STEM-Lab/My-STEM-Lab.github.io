@@ -25,6 +25,8 @@ layout: default
       <p>See whether we're a good fit before paying anything.</p>
       <a class="btn btn-primary btn-block" href="{{ site.register_form }}" target="_blank" rel="noopener">Book a trial</a>
       <a class="btn btn-ghost btn-block" href="mailto:{{ site.email }}?subject={{ page.title | uri_escape }}%20tuition">Email me</a>
+      <p class="wa-aside-label">Or on WhatsApp:</p>
+      {% include whatsapp-chip.html %}
     </div>
 
     {% assign others = site.subjects | where: "level", page.level | sort: "order" %}

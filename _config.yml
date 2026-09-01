@@ -18,6 +18,7 @@ lang: en_GB
 tutor_name: Aarit Maheshwari
 email: aarit@mystemlab.co.uk
 register_form: "https://forms.cloud.microsoft/r/UZzMGsy1aD"
+whatsapp_username: "aarit111"   # shown as @aarit111; no phone number is published
 trial_length: "30 minutes"      # noun form, e.g. "we meet for 30 minutes"
 trial_adj: "30-minute"          # adjective form, e.g. "a 30-minute trial"
 
