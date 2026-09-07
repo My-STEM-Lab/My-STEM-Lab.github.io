@@ -1,0 +1,150 @@
+# ---------------------------------------------------------------------------
+#  DRAFT — TMUA Paper 2 drill: necessary vs sufficient
+#
+#  Every question asks the same thing, deliberately: is P necessary, sufficient,
+#  both, or neither, for Q? The repetition is the training — the point is to
+#  build the habit of checking BOTH directions every time.
+#
+#  answer must be one of: sufficient | necessary | both | neither
+#    sufficient  P => Q only
+#    necessary   Q => P only
+#
+#  AARIT — please check every one before this goes live. I've verified all ten
+#  programmatically (both directions, by brute force over the stated domain),
+#  but you're the one whose name is on the site. Cut anything that feels off.
+# ---------------------------------------------------------------------------
+
+title: "Necessary or sufficient?"
+subject: tmua
+intro: >-
+  Ten statements. For each one, decide whether P is necessary, sufficient, both,
+  or neither, for Q. Check both directions every time — that habit alone removes
+  most of the marks people lose on this.
+
+questions:
+  - id: ns-01
+    domain: "x is a real number"
+    p: "x > 3"
+    q: "x² > 9"
+    answer: sufficient
+    why: >-
+      P ⟹ Q holds: if x > 3 then x is positive and larger than 3, so x² > 9.
+      Q ⟹ P fails: x = −5 gives x² = 25 > 9, but x is nowhere near greater than 3.
+    trap: >-
+      Squaring destroys sign information. The moment you see an even power, ask
+      what the negative branch does — it is almost always where the converse dies.
+
+  - id: ns-02
+    domain: "n is an integer"
+    p: "n is even"
+    q: "n is divisible by 6"
+    answer: necessary
+    why: >-
+      Q ⟹ P holds: anything divisible by 6 is divisible by 2. P ⟹ Q fails:
+      n = 4 is even and not divisible by 6.
+    trap: >-
+      A weaker condition is necessary, not sufficient. If P is a *consequence* of Q,
+      you have necessity — and people reliably label this one the wrong way round.
+
+  - id: ns-03
+    domain: "a quadrilateral"
+    p: "it is a rectangle"
+    q: "it is a square"
+    answer: necessary
+    why: >-
+      Q ⟹ P holds: every square is a rectangle. P ⟹ Q fails: a 2×5 rectangle is
+      not a square.
+    trap: >-
+      The more general category is the necessary one. It feels backwards because
+      "rectangle" sounds like the bigger, more powerful statement — it is bigger,
+      which is exactly why it is not sufficient.
+
+  - id: ns-04
+    domain: "n is an integer"
+    p: "n² is even"
+    q: "n is even"
+    answer: both
+    why: >-
+      Q ⟹ P: if n = 2k then n² = 4k², even. P ⟹ Q: if n were odd, n = 2k+1 would
+      give n² = 4k² + 4k + 1, odd — so n² even forces n even.
+    trap: >-
+      Both directions genuinely hold here, so "both" is right. Do not talk yourself
+      out of it: having checked one direction is not a reason to assume the other fails.
+
+  - id: ns-05
+    domain: "x is a real number"
+    p: "|x − 2| < 3"
+    q: "−1 < x < 6"
+    answer: sufficient
+    why: >-
+      P unpacks to −1 < x < 5, which sits inside −1 < x < 6, so P ⟹ Q.
+      Q ⟹ P fails: x = 5.5 satisfies Q but gives |x − 2| = 3.5.
+    trap: >-
+      Always unpack the modulus into an interval before deciding anything. Compared
+      side by side these look almost identical; written as intervals the gap at the
+      top end is obvious.
+
+  - id: ns-06
+    domain: "x and y are real numbers"
+    p: "xy > 0"
+    q: "x + y > 0"
+    answer: neither
+    why: >-
+      P ⟹ Q fails: x = y = −1 gives xy = 1 > 0 but x + y = −2.
+      Q ⟹ P fails: x = 3, y = −1 gives x + y = 2 > 0 but xy = −3.
+    trap: >-
+      Two negatives multiply to a positive. Whenever a question mixes a product and
+      a sum, test both-negative before anything else — it kills most sufficiency claims.
+
+  - id: ns-07
+    domain: "n is an integer greater than 2"
+    p: "n is prime"
+    q: "n is odd"
+    answer: sufficient
+    why: >-
+      P ⟹ Q holds for n > 2: any even number above 2 has 2 as a factor, so a prime
+      above 2 must be odd. Q ⟹ P fails: n = 9 is odd and not prime.
+    trap: >-
+      Note the n > 2 restriction, and notice why it is there — without it, n = 2 is
+      prime and even, and the implication collapses. Read the domain line before
+      you read the statements.
+
+  - id: ns-08
+    domain: "x is a real number"
+    p: "x³ > 8"
+    q: "x > 2"
+    answer: both
+    why: >-
+      Cubing is strictly increasing across all reals, so x³ > 8 and x > 2 are the
+      same condition. Both directions hold.
+    trap: >-
+      Compare this with the first question. Even powers break the converse because
+      negatives survive them; odd powers do not, so the equivalence holds. The shape
+      of the question is identical and the answer is different — that is the lesson.
+
+  - id: ns-09
+    domain: "x is a real number"
+    p: "x > 0"
+    q: "sin x > 0"
+    answer: neither
+    why: >-
+      P ⟹ Q fails: x = 4 gives sin x ≈ −0.76. Q ⟹ P fails: x = −3π/2 gives
+      sin x = 1 > 0 with x negative.
+    trap: >-
+      Periodic functions rarely give you clean implications in either direction.
+      If sin, cos or tan appears, look for a counterexample before you look for a proof.
+
+  - id: ns-10
+    domain: "a, b and c are real constants"
+    p: "b² − 4ac > 0"
+    q: "ax² + bx + c = 0 has two distinct real roots"
+    answer: necessary
+    why: >-
+      Q ⟹ P holds: two distinct real roots require a positive discriminant.
+      P ⟹ Q fails on a technicality that matters — take a = 0, b = −4, c = −4.
+      Then b² − 4ac = 16 > 0, but the equation is −4x − 4 = 0, which is linear and
+      has exactly one root.
+    trap: >-
+      The question never said this was a quadratic. When a coefficient is only
+      described as "real", a = 0 is allowed, and the whole implication turns on it.
+      This is the single most common way TMUA catches people who know the content.

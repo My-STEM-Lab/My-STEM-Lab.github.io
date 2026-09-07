@@ -1,0 +1,131 @@
+# ---------------------------------------------------------------------------
+#  TMUA Paper 2 drill — necessary vs sufficient   (v2, Aarit's explanations)
+#
+#  Maths is written as LaTeX between $…$ so MathJax renders it in the engine.
+#  Text is injected as HTML, so use <b>bold</b> and <i>italic</i> — NOT markdown **stars**.
+#  Fields per question:
+#    question  full wording as the student sees it
+#    answer    sufficient | necessary | both | neither
+#    hint      shown on request, before answering — Aarit's
+#    why       shown after answering — Aarit's, typeset
+#
+#  All ten questions reviewed and signed off by Aarit, 7 Sep 2026.
+# ---------------------------------------------------------------------------
+
+title: "Necessary or sufficient?"
+subject: tmua
+prompt: "Is $P$ necessary, sufficient, both, or neither, for $Q$?"
+intro: >-
+  Ten pairs of statements. For each, decide whether $P$ is necessary, sufficient,
+  both, or neither, for $Q$. Check both directions every time — that habit alone
+  removes most of the marks people lose here.
+
+questions:
+  - id: ns-01
+    question: "Let $P$: $x > 3$, and $Q$: $x^2 > 9$, where $x$ is a real number."
+    answer: sufficient
+    hint: "Note that $x$ in statement $Q$ can take both positive and negative values."
+    why: >-
+      There are two ways in: compare the inequalities directly, or test values —
+      the second is the way the TMUA usually rewards.
+      If $P$ is true then $Q$ follows. But if $Q$ is true, $x$ need not be greater
+      than 3: $Q$ only tells you $x > 3$ <b>or</b> $x < -3$. That disjunction is the
+      full necessary-and-sufficient condition, and $P$ is just one half of it.
+
+  - id: ns-02
+    question: "Let $P$: $n$ is even, and $Q$: $n$ is divisible by 6, where $n$ is an integer."
+    answer: necessary
+    hint: "Are all even numbers multiples of 6?"
+    why: >-
+      Take $n = 4$ and $n = 6$. $4$ is even but not a multiple of 6, so $P$ does not
+      imply $Q$. $6$ is a multiple of 6 and is even — and that holds generally, since
+      any multiple of 6 carries a factor of 2. So $Q \implies P$: a necessary condition.
+
+  - id: ns-03
+    question: "A quadrilateral is given. Let $P$: it is a rectangle, and $Q$: it is a square."
+    answer: necessary
+    hint: "Are all rectangles squares? Are all squares rectangles?"
+    why: >-
+      Every square is a rectangle — it is a quadrilateral with four right angles,
+      which is exactly the definition of a rectangle. So $Q \implies P$, a necessary
+      condition. The converse fails: a $2 \times 5$ rectangle is not a square.
+
+  - id: ns-04
+    question: "Let $P$: $n^2$ is even, and $Q$: $n$ is even, where $n$ is an integer."
+    answer: both
+    hint: "Try examples, and consider prime factorisations."
+    why: >-
+      In the TMUA you would just plug numbers in, but the proof is short.
+      Start from the prime factorisation of $n^2$. Because it is a <i>square</i>, every
+      prime appears to an even power. So if $n^2$ is even, the prime 2 appears at
+      least once, and therefore at least twice — meaning $4 \mid n^2$.
+      And $4 \mid n^2$ if and only if $2 \mid n$. So the two statements are
+      equivalent: both necessary and sufficient.
+
+  - id: ns-05
+    question: "Let $P$: $|x - 2| < 3$, and $Q$: $-1 < x < 6$, where $x$ is a real number."
+    answer: sufficient
+    hint: "Consider solving the inequality."
+    why: >-
+      Quickest route is to try $x = 5$: here $Q$ is true but $P$ is false, so $P$
+      cannot be necessary. For the other direction, solve the modulus:
+      $|x-2| < 3$ gives $-1 < x < 5$, which sits entirely inside $-1 < x < 6$.
+      So $P \implies Q$ — sufficient but not necessary. Plotting both on Desmos
+      makes the overhang at the top end obvious.
+
+  - id: ns-06
+    question: "Let $P$: $xy > 0$, and $Q$: $x + y > 0$, where $x$ and $y$ are real numbers."
+    answer: neither
+    hint: "Try some numbers out."
+    why: >-
+      To disprove sufficiency, make both $x$ and $y$ negative: the product is positive
+      but the sum is not. To disprove necessity, make $y$ a large positive and $x$ a
+      small negative — say $x = -1$, $y = 10$: the sum is positive but the product is not.
+      Neither direction holds.
+
+  - id: ns-07
+    question: "Let $P$: $n$ is prime, and $Q$: $n$ is odd, where $n$ is an integer greater than 2."
+    answer: sufficient
+    hint: "Are all odd numbers prime? Are all prime numbers more than 2 odd?"
+    why: >-
+      Sufficiency is a standard fact about primes: any even number above 2 has 2 as a
+      proper factor, so it cannot be prime. Hence every prime above 2 is odd.
+      Necessity fails — try $n = 9$, or any odd number that isn't prime.
+      Note the restriction $n > 2$: without it, $n = 2$ is prime and even, and the
+      implication collapses.
+
+  - id: ns-08
+    question: "Let $P$: $x^3 > 8$, and $Q$: $x > 2$, where $x$ is a real number."
+    answer: both
+    hint: "Consider solving the inequality."
+    why: >-
+      The solution set of $P$ is exactly the inequality $Q$, because cubing is strictly
+      increasing across all the reals — unlike squaring, it never folds the negatives
+      back over. So both directions hold. Desmos will confirm it if you aren't convinced.
+      Worth comparing with question 1: same shape, different answer, and the reason is
+      odd power versus even power.
+
+  - id: ns-09
+    question: "Let $P$: $x > 0$, and $Q$: $\\sin x > 0$, where $x$ is a real number in radians."
+    answer: neither
+    hint: "Try some angles — make sure you are working in radians."
+    why: >-
+      Counterexamples disprove both directions. If $x = \frac{3\pi}{2}$, it satisfies
+      $P$ but not $Q$, since $\sin\frac{3\pi}{2} = -1$. If $x = -\frac{3\pi}{2}$, it
+      satisfies $Q$ but not $P$, since $\sin\left(-\frac{3\pi}{2}\right) = 1$.
+      Neither implication survives.
+
+  - id: ns-10
+    question: >-
+      Let $P$: $b^2 - 4ac > 0$, and $Q$: the equation $ax^2 + bx + c = 0$ has two
+      distinct real roots, where $a$, $b$ and $c$ are real constants.
+    answer: necessary
+    hint: "Read the statement carefully. Is it about quadratics?"
+    why: >-
+      $Q \implies P$ holds: two distinct real roots require a positive discriminant.
+      Sufficiency fails on the detail the question is really testing. Nothing says
+      $a \neq 0$ — only that $a$, $b$ and $c$ are real. Take $a = 0$, $b = -4$, $c = -4$:
+      then $b^2 - 4ac = 16 > 0$, but the equation is $-4x - 4 = 0$, which is linear and
+      has exactly one root. So $P$ is necessary but not sufficient.
+      The habit worth taking away: when a coefficient is only described as "real",
+      always test the case where any variable can be 0, subject to the restrictions of the question.

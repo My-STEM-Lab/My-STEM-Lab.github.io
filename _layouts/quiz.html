@@ -1,0 +1,80 @@
+---
+layout: default
+---
+{% assign quiz = site.data.quizzes[page.quiz_data] %}
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">
+        <a href="{{ '/resources/' | relative_url }}">Free resources</a>
+        <span aria-hidden="true">→</span> {{ page.subject }}
+      </p>
+      <h1>{{ quiz.title }}</h1>
+      <p class="lede">{{ quiz.intro }}</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="quiz" id="quiz"
+         data-prompt="{{ quiz.prompt | escape }}"
+         data-trial="{{ site.register_form }}"
+         data-subject-url="{{ page.subject_url | relative_url }}"
+         data-trial-label="Book a free {{ site.trial_adj }} trial">
+
+      <!-- ============ START ============ -->
+      <div class="quiz-panel" id="quiz-start">
+        <div class="quiz-start-inner">
+          <p class="quiz-meta">
+            <span>{{ quiz.questions | size }} questions</span>
+            <span>No timer</span>
+            <span>Nothing saved or shared</span>
+          </p>
+          <p>Every question asks the same thing on purpose. The repetition is the training —
+          what you're building is the habit of checking <em>both</em> directions before you commit.</p>
+          <button class="btn btn-primary btn-lg" id="quiz-begin" type="button">Start the drill</button>
+        </div>
+      </div>
+
+      <!-- ============ QUESTION ============ -->
+      <div class="quiz-panel" id="quiz-play" hidden>
+        <div class="quiz-head">
+          <div class="quiz-dots" id="quiz-dots" aria-hidden="true"></div>
+          <p class="quiz-count">Question <b id="quiz-n">1</b> of <span id="quiz-total"></span></p>
+        </div>
+
+        <div class="quiz-stem" id="quiz-stem" tabindex="-1"></div>
+        <p class="quiz-prompt" id="quiz-prompt"></p>
+
+        <div class="quiz-options" id="quiz-options" role="group" aria-label="Choose an answer">
+          <button type="button" data-a="sufficient"><b>Sufficient</b><small>but not necessary</small></button>
+          <button type="button" data-a="necessary"><b>Necessary</b><small>but not sufficient</small></button>
+          <button type="button" data-a="both"><b>Necessary and sufficient</b><small>both directions hold</small></button>
+          <button type="button" data-a="neither"><b>Neither</b><small>no implication either way</small></button>
+        </div>
+
+        <button class="quiz-hint-btn" id="quiz-hint-btn" type="button">Show a hint</button>
+        <div class="quiz-hint" id="quiz-hint" hidden></div>
+
+        <div class="quiz-feedback" id="quiz-feedback" hidden aria-live="polite"></div>
+
+        <button class="btn btn-primary btn-lg quiz-next" id="quiz-next" type="button" hidden>Next question</button>
+      </div>
+
+      <!-- ============ RESULTS ============ -->
+      <div class="quiz-panel" id="quiz-results" hidden></div>
+
+      <noscript>
+        <div class="callout">
+          <p>This drill needs JavaScript. The same material is written up in the
+          <a href="{{ '/blog/tmua-paper-2-necessary-and-sufficient/' | relative_url }}">blog post on necessary and sufficient conditions</a>.</p>
+        </div>
+      </noscript>
+    </div>
+  </div>
+</section>
+
+<script id="quiz-data" type="application/json">{{ quiz.questions | jsonify }}</script>
+<script src="{{ '/assets/js/quiz.js' | relative_url }}"></script>

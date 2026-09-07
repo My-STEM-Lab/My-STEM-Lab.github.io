@@ -92,6 +92,11 @@ a-level-physics:
     featured: true
 
 tmua:
+  - title: "Necessary or sufficient? — interactive drill"
+    type: "Practice"
+    description: "Ten Paper 2 questions with instant feedback, and a diagnosis of which direction you keep missing."
+    url: "/quizzes/tmua-necessary-sufficient/"
+    featured: true
   - title: "Official TMUA past papers"
     type: "Past papers"
     description: "Every released paper and worked solution from the official test provider — start here."

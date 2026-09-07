@@ -94,6 +94,11 @@ Do real past papers, and after each one write down not just what you got wrong b
 patterns it was. The list is short enough that you'll start recognising them cold within a fortnight.
 
 <div class="callout" markdown="1">
+**Try it now:** there's a free [ten-question drill on exactly this]({{ '/quizzes/tmua-necessary-sufficient/' | relative_url }})
+— instant feedback on each one, and it tells you which direction you keep missing.
+</div>
+
+<div class="callout" markdown="1">
 Free official TMUA past papers and worked solutions are linked on the
 [TMUA subject page]({{ '/subjects/tmua/' | relative_url }}). Start with a full paper cold to get a
 baseline — it's uncomfortable, and it's the most useful hour of preparation you'll spend.

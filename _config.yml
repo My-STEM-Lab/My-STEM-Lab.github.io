@@ -51,10 +51,15 @@ collections:
   subjects:
     output: true
     permalink: /subjects/:name/
+  quizzes:
+    output: true
+    permalink: /quizzes/:name/
 
 defaults:
   - scope: { path: "", type: "subjects" }
     values: { layout: "subject" }
+  - scope: { path: "", type: "quizzes" }
+    values: { layout: "quiz", mathjax: true }
   - scope: { path: "", type: "posts" }
     values: { layout: "post" }
   - scope: { path: "" }
