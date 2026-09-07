@@ -19,6 +19,22 @@ tutor_name: Aarit Maheshwari
 email: aarit@mystemlab.co.uk
 register_form: "https://forms.cloud.microsoft/r/UZzMGsy1aD"
 whatsapp_username: "aarit111"   # shown as @aarit111; no phone number is published
+
+# --- Analytics --------------------------------------------------------------
+#  Only runs on the live site — local previews are never counted.
+#  Leave provider blank to switch analytics off entirely.
+#
+#  provider: cloudflare   id = the token from your Cloudflare Web Analytics site
+#            plausible    id = your domain, e.g. mystemlab.co.uk
+#            ga4          id = your Measurement ID, e.g. G-XXXXXXXXXX
+#
+#  NOTE ON ga4: Google Analytics sets cookies and tracks individual visitors,
+#  which under UK PECR needs a consent banner and a privacy policy. Cloudflare
+#  and Plausible are cookieless and aggregate-only, so they don't. Given the site
+#  is used mostly by under-18s, that difference is worth keeping.
+analytics:
+  provider: "cloudflare"
+  id: "7d10eece821c406c9e3f859e0d222306"
 trial_length: "30 minutes"      # noun form, e.g. "we meet for 30 minutes"
 trial_adj: "30-minute"          # adjective form, e.g. "a 30-minute trial"
 
