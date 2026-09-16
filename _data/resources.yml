@@ -19,13 +19,13 @@ gcse-maths:
   - title: "Dr Frost Maths"
     type: "Practice"
     description: "Free question banks sorted by topic, with instant marking and worked solutions."
-    url: "https://www.drfrostmaths.com/"
+    url: "https://www.drfrost.org/"
     external: true
     featured: true
   - title: "Physics & Maths Tutor — GCSE Maths"
     type: "Past papers"
     description: "Past papers and mark schemes for every major exam board, plus topic question sets."
-    url: "https://www.physicsandmathstutor.com/gcse-maths-papers/"
+    url: "https://www.physicsandmathstutor.com/past-papers/gcse-maths/"
     external: true
 
 gcse-physics:
@@ -38,7 +38,7 @@ gcse-physics:
   - title: "Physics & Maths Tutor — GCSE Physics"
     type: "Past papers"
     description: "Past papers, mark schemes and topic-by-topic question sets."
-    url: "https://www.physicsandmathstutor.com/physics-revision/gcse/"
+    url: "https://www.physicsandmathstutor.com/past-papers/gcse-physics/"
     external: true
 
 gcse-computer-science:
@@ -77,10 +77,10 @@ a-level-further-maths:
     url: "https://madasmaths.com/"
     external: true
     featured: true
-  - title: "Integral (MEI)"
-    type: "Notes"
-    description: "Notes and exercises written for the OCR MEI specification."
-    url: "https://integralmaths.org/"
+  - title: "Underground Mathematics"
+    type: "Practice"
+    description: "Cambridge-built tasks covering complex numbers, matrices and calculus, built around connections between topics rather than drill."
+    url: "https://undergroundmathematics.org/"
     external: true
 
 a-level-physics:
@@ -97,9 +97,9 @@ tmua:
     description: "Ten Paper 2 questions with instant feedback, and a diagnosis of which direction you keep missing."
     url: "/quizzes/tmua-necessary-sufficient/"
     featured: true
-  - title: "Official TMUA past papers"
-    type: "Past papers"
-    description: "Every released paper and worked solution from the official test provider — start here."
+  - title: "Official TMUA information and sample tests"
+    type: "Practice"
+    description: "The official test provider. Specification, format and free sample tests — the samples need a free account and open through Pearson VUE."
     url: "https://www.esat-tmua.ac.uk/"
     external: true
     featured: true
@@ -113,19 +113,25 @@ step:
   - title: "STEP Support Programme (Cambridge)"
     type: "Practice"
     description: "Free, structured 25-module programme from the University of Cambridge. If you do one thing for STEP, do this."
-    url: "https://maths.org/step/"
+    url: "https://step.maths.org/"
     external: true
     featured: true
-  - title: "STEP past papers and mark schemes"
+  - title: "STEP Questions Database"
     type: "Past papers"
-    description: "The full archive of past STEP papers with official solutions and examiner reports."
-    url: "https://maths.org/step/past-papers"
+    description: "Every STEP question from 1986 to 2018 in one searchable database — filter by paper, topic or year to drill a single weakness."
+    url: "https://step.maths.org/questions"
+    external: true
+    featured: true
+  - title: "Worked solutions to recent STEP papers"
+    type: "Past papers"
+    description: "Fully worked solutions with commentary for STEP 2 and 3 from 2019 onwards — the years the questions database doesn't reach."
+    url: "https://step.maths.org/worked-step-papers"
     external: true
 
 esat:
-  - title: "Official ESAT information and past materials"
-    type: "Past papers"
-    description: "Specification, format and released practice material for the Engineering and Science Admissions Test."
+  - title: "Official ESAT information and sample tests"
+    type: "Practice"
+    description: "Specification, module structure and free sample material for the Engineering and Science Admissions Test. Samples need a free account via Pearson VUE."
     url: "https://www.esat-tmua.ac.uk/"
     external: true
     featured: true

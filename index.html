@@ -18,7 +18,14 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
         <a class="btn btn-primary btn-lg" href="{{ site.register_form }}" target="_blank" rel="noopener">Book your free trial</a>
         <a class="btn btn-outline-light" href="{{ '/subjects/' | relative_url }}">See subjects &amp; prices</a>
       </div>
-      <p class="hero-note">Taught by {{ site.tutor_name }} · A* in A-Level Maths and Further Maths</p>
+      <div class="hero-tutor">
+        <img class="hero-avatar" src="{{ '/assets/img/aarit-avatar.jpg' | relative_url }}"
+             alt="{{ site.tutor_name }}" width="256" height="256">
+        <p class="hero-note">
+          <b>Taught by {{ site.tutor_name }}</b>
+          <span>A* in A-Level Maths and Further Maths</span>
+        </p>
+      </div>
     </div>
 
     <div class="hero-card">
@@ -154,29 +161,8 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
   </div>
 </section>
 
-<!-- ===================== PRICING ===================== -->
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head center">
-      <p class="eyebrow">Simple pricing</p>
-      <h2>Rates</h2>
-      <p class="section-lede">Paid per session. No packages, no joining fee, and the first {{ site.trial_length }} are free.</p>
-    </div>
-    <div class="price-grid">
-      {% for p in site.pricing %}
-        <div class="price">
-          <h3>{{ p.level }}</h3>
-          <span class="amount">{{ p.price }}</span>
-          <span class="unit">{{ p.unit }}</span>
-          <p class="detail">{{ p.detail }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- ===================== ABOUT / POSTER ===================== -->
-<section class="section">
+<section class="section section-alt">
   <div class="wrap poster-block">
     <div>
       <p class="eyebrow">About the tutor</p>
@@ -207,6 +193,28 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
     </div>
   </div>
 </section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Simple pricing</p>
+      <h2>Rates</h2>
+      <p class="section-lede">Paid per session. No packages, no joining fee, and the first {{ site.trial_length }} are free.</p>
+    </div>
+    <div class="price-grid">
+      {% for p in site.pricing %}
+        <div class="price">
+          <h3>{{ p.level }}</h3>
+          <span class="amount">{{ p.price }}</span>
+          <span class="unit">{{ p.unit }}</span>
+          <p class="detail">{{ p.detail }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 <!-- ===================== FAQ ===================== -->
 <section class="section section-alt">

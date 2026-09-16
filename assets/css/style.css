@@ -177,7 +177,21 @@ p  { margin: 0 0 1.1em; }
 }
 .hero-lede { font-size: clamp(1.05rem, .98rem + .4vw, 1.22rem); color: #c5dbe9; max-width: 40ch; margin-bottom: 1.1em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.9rem; }
-.hero-note { margin-top: 1.3rem; font-size: .9rem; color: #93b3c9; }
+/* Tutor's face in the hero — a solo tutor's credibility is a person, so the
+   photo belongs above the fold rather than six screens down. */
+.hero-tutor { display: flex; align-items: center; gap: .85rem; margin-top: 1.9rem; }
+.hero-avatar {
+  width: 54px; height: 54px; flex: none;
+  border-radius: 50%; object-fit: cover;
+  border: 2px solid rgba(255,255,255,.28);
+  box-shadow: 0 4px 14px -4px rgba(0,0,0,.45);
+}
+.hero-note { margin: 0; font-size: .88rem; color: #93b3c9; line-height: 1.4; }
+.hero-note b { display: block; color: #dcecf6; font-weight: 600; font-size: .95rem; }
+@media (max-width: 420px) {
+  .hero-avatar { width: 46px; height: 46px; }
+  .hero-note { font-size: .82rem; }
+}
 
 .hero-card {
   background: rgba(255,255,255,.055);
