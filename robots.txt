@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------------------
+#  robots.txt — mystemlab.co.uk
+#
+#  This file is a REQUEST, not a lock. Well-behaved crawlers obey it; malicious
+#  ones ignore it entirely. It's here to turn away the commercial SEO crawlers
+#  that hit small sites constantly and inflate visitor numbers without ever
+#  sending a real person.
+#
+#  To stop another crawler later: copy a two-line block and change the name.
+#  Check your analytics or ask me before blocking something you don't recognise —
+#  blocking the wrong agent can remove you from a search engine.
+# ---------------------------------------------------------------------------
+
+# --- Default: everyone else is welcome --------------------------------------
+# Google, Bing and DuckDuckGo are how students find the site. Never block these.
+User-agent: *
+Allow: /
+
+# --- SEO / backlink crawlers -------------------------------------------------
+# Commercial tools that crawl the whole web to sell competitor data. They bring
+# no visitors, and on a small site they can outnumber real traffic.
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+# --- Deliberately NOT blocked ------------------------------------------------
+# AI crawlers (GPTBot, ClaudeBot, CCBot, PerplexityBot, Google-Extended) are
+# allowed on purpose. When someone asks an assistant about TMUA or STEP
+# preparation, the free resources here can be cited — that's a referral route
+# worth more than the handful of pageviews the crawling costs.
+# Reverse that by adding blocks for them, exactly like the ones above.
+
+Sitemap: https://mystemlab.co.uk/sitemap.xml
