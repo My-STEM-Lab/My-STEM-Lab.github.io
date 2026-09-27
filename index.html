@@ -47,7 +47,7 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
     <div class="section-head">
       <p class="eyebrow">What I teach</p>
       <h2>Subjects</h2>
-      <p class="section-lede">Every subject page sets out exactly what's covered, how I teach it, and free resources you can start using today.</p>
+      <p class="section-lede">Paid per session — no packages, no joining fee, and the first {{ site.trial_length }} are free. Every subject page sets out what's covered and the free resources that go with it.</p>
     </div>
 
     <div class="level-head mt"><h3>GCSE</h3>
@@ -107,17 +107,16 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
       <p class="eyebrow">How I teach</p>
       <h2>Small, meaningful steps</h2>
       <p class="section-lede">
-        Most students don't get stuck because a topic is too hard. They get stuck because the question
-        in front of them doesn't look like the one they practised. That's a different problem, and it
-        has a different fix.
+        Most students get stuck not because a topic is too hard, but because the question in front of
+        them doesn't look like the one they practised. That needs a different fix.
       </p>
     </div>
 
     <div class="grid grid-3">
       <div class="card">
         <h3>Break it down</h3>
-        <p>Every hard problem is a stack of small ones. We take them apart together until each step is
-        something you could have found yourself — because next time, you will.</p>
+        <p>Every hard problem is a stack of small ones. We take them apart until each step is one you
+        could have found yourself.</p>
       </div>
       <div class="card">
         <h3>Understand, don't memorise</h3>
@@ -126,8 +125,8 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
       </div>
       <div class="card">
         <h3>Work on your actual weak spots</h3>
-        <p>Every mistake gets classified — a real gap, too slow, a careless slip, or a misread question.
-        The pattern tells us what to do next far better than a score does.</p>
+        <p>Every mistake gets classified — a real gap, too slow, a careless slip, a misread question.
+        The pattern tells us more than a score does.</p>
       </div>
     </div>
   </div>
@@ -143,15 +142,15 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
     <ol class="steps">
       <li>
         <h3>Register your interest</h3>
-        <p>A short form telling me the subject, the year group, and what you'd like to get out of it.</p>
+        <p>A short form: subject, year group, and what you want out of it.</p>
       </li>
       <li>
         <h3>Free {{ site.trial_adj }} trial</h3>
-        <p>We meet online, work through a question together, and you decide whether it's a fit. No cost, no commitment.</p>
+        <p>We work through a question together online. No cost, no commitment.</p>
       </li>
       <li>
         <h3>A plan, not just sessions</h3>
-        <p>We agree what we're aiming at and in what order — especially important for admissions tests with fixed dates.</p>
+        <p>We agree what we're aiming at and in what order — vital for admissions tests with fixed dates.</p>
       </li>
       <li>
         <h3>Weekly sessions</h3>
@@ -168,13 +167,8 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
       <p class="eyebrow">About the tutor</p>
       <h2>Hi, I'm {{ site.tutor_name }}</h2>
       <p>
-        I've just finished my A-Levels at St Olave's Grammar School — 2 A*s and 2 As, with the
-        A*s in Maths and Further Maths, including 92% in Further Maths. I start at the
-        University of Warwick reading Pure Mathematics in September 2026.
-      </p>
-      <p>
-        Before that: a grade 9 in every one of my ten GCSEs, including full marks in Maths —
-        top 0.1% nationally — and a top 10% national score in the TMUA.
+        I've just finished my A-Levels at St Olave's Grammar School and start at the University of
+        Warwick reading Pure Mathematics in September 2026.
       </p>
       <p>
         I sat these exams recently enough to remember exactly where they catch people out, and I
@@ -194,30 +188,11 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
   </div>
 </section>
 
-<!-- ===================== PRICING ===================== -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head center">
-      <p class="eyebrow">Simple pricing</p>
-      <h2>Rates</h2>
-      <p class="section-lede">Paid per session. No packages, no joining fee, and the first {{ site.trial_length }} are free.</p>
-    </div>
-    <div class="price-grid">
-      {% for p in site.pricing %}
-        <div class="price">
-          <h3>{{ p.level }}</h3>
-          <span class="amount">{{ p.price }}</span>
-          <span class="unit">{{ p.unit }}</span>
-          <p class="detail">{{ p.detail }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
+<!-- Rates live in the Subjects section above (level badges + per-card prices)
+     and in full on /subjects/. Do not duplicate them here. -->
 
 <!-- ===================== FAQ ===================== -->
-<section class="section section-alt">
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Before you ask</p>
@@ -226,29 +201,26 @@ description: "Online 1-to-1 tuition in Maths, Further Maths, Physics and Computi
     <div class="faq">
       <details open>
         <summary>How do online sessions actually work?</summary>
-        <p>We meet by video call with a shared digital whiteboard, so we can both write and both see the
-        working build up in real time. It works just as well as being in a room together — often better,
-        because you get to keep the whole board afterwards.</p>
+        <p>Video call with a shared digital whiteboard, so we can both write and both see the working
+        build up. You keep the whole board afterwards.</p>
       </details>
       <details>
         <summary>Is the trial session really free?</summary>
-        <p>Yes. {{ site.trial_length }}, no payment details taken, no obligation afterwards. It's as much
-        for me as for you — I'd rather find out early if I'm not the right person to help.</p>
+        <p>Yes. {{ site.trial_length }}, no payment details taken, no obligation afterwards.</p>
       </details>
       <details>
         <summary>What should we bring to the first session?</summary>
-        <p>A question or topic that's currently going badly, and a recent piece of marked work if you have
-        one. That tells me more in five minutes than any amount of describing would.</p>
+        <p>A topic that's currently going badly, and a recent piece of marked work if you have one.</p>
       </details>
       <details>
         <summary>Do you set homework?</summary>
-        <p>Usually, and it's discussed at the start of the next session. For admissions tests it's always
-        timed, because untimed practice teaches the wrong habit for those exams.</p>
+        <p>Usually, and it's reviewed at the start of the next session. For admissions tests it's always
+        timed, because untimed practice teaches the wrong habit.</p>
       </details>
       <details>
         <summary>How far ahead should we start admissions test preparation?</summary>
         <p>For TMUA and ESAT, six to ten weeks of focused work is usually enough. STEP wants far longer —
-        ideally starting in Year 12 or the summer before Year 13.</p>
+        ideally from Year 12 or the summer before Year 13.</p>
       </details>
       <details>
         <summary>Are the free resources really free?</summary>
