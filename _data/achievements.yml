@@ -3,9 +3,9 @@
   label: "A-Level Maths & Further Maths"
   detail: "2 A*s and 2 As across four A-Levels — including 92% in Further Maths"
 
-- figure: "9s"
-  label: "Every GCSE"
-  detail: "Grade 9 in all ten GCSE subjects"
+- figure: "Nine 9s"
+  label: "GCSE"
+  detail: "Grade 9 in nine of ten GCSE subjects"
 
 - figure: "100%"
   label: "GCSE Maths"
@@ -16,8 +16,8 @@
   detail: "National percentile in the Test of Mathematics for University Admission"
 
 - figure: "Warwick"
-  label: "From Sept 2026"
-  detail: "Reading Pure Mathematics at the University of Warwick"
+  label: "Current"
+  detail: "Reading Mathematics at the University of Warwick"
 
 - figure: "St Olave's"
   label: "Grammar School"
