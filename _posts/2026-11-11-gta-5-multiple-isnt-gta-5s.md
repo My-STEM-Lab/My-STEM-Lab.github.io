@@ -55,12 +55,20 @@ sense, own.
 I'd expect strong sales. I'd also expect a weaker share-price response than the 2013 comparison
 implies.
 
-A 33% price rise is a real constraint on units, and it lands on an install base that has already
-swallowed two rounds of hardware price rises — the Xbox Series S is now $599.99, up from $429.99
-in late 2025, and the PS5 Pro is $899.99 — as tariffs and the AI-driven memory shortage feed
-through to shelf prices. There's no PC market at launch to absorb the difference. And the market
-has had a long time to price this in: Take-Two sits around $235 against a 52-week high of $266,
-which doesn't look like a stock waiting to be surprised.
+A 33% price rise is a real constraint on units, and it lands on an install base that is already
+being squeezed. The 1TB Xbox Series S now sells for **$599.99 against a $349.99 launch price**,
+and the Series X is **$799.99 against $499.99** — the budget console now costs more than the
+flagship did at launch, as tariffs and the AI-driven memory shortage feed through to shelf prices.
+
+That is turning up in the sales data, not just the price lists. Year to date through August,
+Circana had US Xbox unit sales **down 33%** year on year and PlayStation **down 25%** — an
+all-time low for Xbox, the lowest since 2013 for PlayStation — with the average price paid for a
+console on both platforms at a record high. Circana's Mat Piscatella put it plainly: price
+sensitivity is becoming a real problem. That is the install base GTA 6 is launching into.
+
+There's no PC market at launch to absorb the difference either. And the market has had a long
+time to price this in: Take-Two sits around $235 against a 52-week high of $266, which doesn't
+look like a stock waiting to be surprised.
 
 ## The strongest argument against me
 
@@ -72,14 +80,23 @@ So the unit economics may well improve at exactly the moment goodwill falls. If 
 dominant effect, I'm wrong — and the backlash I'm treating as a headwind turns out to be noise
 around a structurally better business.
 
+There's also a dent in my own evidence, and it's the most recent data point. September broke the
+trend: US PS5 unit sales rose 22% year on year, with dollar sales up 43%. Piscatella put most of
+that down to Marvel's Wolverine rather than GTA 6 anticipation, and Xbox units still fell 27% in
+the same month. But it shows a single large exclusive can still move console demand at these
+prices — which is exactly what GTA 6 is.
+
 ## What would prove me wrong
 
-Two things, both checkable:
+Three things, all checkable:
 
 1. **Launch units track GTA 5's trajectory despite the price.** If the 33% increase doesn't
    suppress volume, my main mechanism fails.
 2. **A PC release arrives sooner than Rockstar's eighteen-month precedent.** This has already
    been rumoured. It would pull a whole market forward into the window I've assumed is closed.
+3. **US console sales keep climbing through October and November.** September already broke the
+   trend. If the next two Circana prints go the same way, the squeezed install base I'm leaning
+   on isn't squeezed, and the argument loses its foundation.
 
 I've picked something with a resolution date on purpose. A view you can't be caught out on isn't
 worth much — and I'd rather be wrong in public with my reasoning on record than vague and
@@ -94,6 +111,8 @@ same two tests, scored honestly.
 **Sources.** Take-Two share prices via Twelve Data (September 2013 monthly close, and 11 November
 2026 including the 52-week range). GTA 6 release date, platforms, $79.99 standard-edition pricing
 and the download-code confirmation via Forbes and Video Games Chronicle; retailer refusals via
-Push Square. Sony's 2028 disc decision via July 2026 reporting. Console price rises and the
-memory-shortage explanation via Statista's console pricing chart.
+Push Square. Sony's 2028 disc decision via July 2026 reporting. Xbox launch prices via Wikipedia,
+current prices via Windows Central's August 2026 price tracker. US console unit sales, average
+prices paid and the Piscatella quote are Circana data, reported by Video Games Chronicle (year to
+date through August) and Push Square and Video Games Chronicle (September).
 </div>
