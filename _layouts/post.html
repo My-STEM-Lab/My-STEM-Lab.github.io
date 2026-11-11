@@ -27,4 +27,11 @@ layout: default
   <p class="muted mt"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
 </div>
 
-{% include cta.html heading="Want this kind of help on your own work?" text="A free trial session is the quickest way to find out if I can help." %}
+{% comment %}
+  A post can override the closing call-to-action by setting cta_heading and/or
+  cta_text in its front matter. Posts that don't set them get the tutoring default.
+  (Liquid can't apply filters inside an include tag, so assign first.)
+{% endcomment %}
+{% assign post_cta_heading = page.cta_heading | default: "Want this kind of help on your own work?" %}
+{% assign post_cta_text = page.cta_text | default: "A free trial session is the quickest way to find out if I can help." %}
+{% include cta.html heading=post_cta_heading text=post_cta_text %}

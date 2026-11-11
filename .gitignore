@@ -8,3 +8,4 @@ package-lock.json
 Gemfile.lock
 vendor/
 _to_delete/
+Claude outputs/
